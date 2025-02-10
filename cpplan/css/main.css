@@ -1,0 +1,460 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nanum+Brush+Script&family=Nanum+Pen+Script&family=Noto+Serif+KR:wght@400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dancing+Script:wght@700&family=Fugaz+One&family=Limelight&family=Nanum+Myeongjo:wght@800&display=swap'); */
+
+.sub {
+    display: none;
+}
+
+.mainCon {
+    background-color: #fff;
+    padding: 100px 0;
+}
+
+.mainCon h3 {
+    font-size: 40px;
+    color: #333333;
+    text-align: right;
+    font-weight: 500;
+    line-height: 50px;
+}
+
+/* main 배너 텍스트 중앙정렬 */
+.parallax-window .bText.mainbText {
+    padding-left: 0;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 45%;
+    text-align: center;
+}
+
+.parallax-window .bText.mainbText h2 {
+    line-height: normal;
+    font-size: 3vw;
+    position: relative;
+    top: 4px;
+    font-weight: 500;
+}
+
+.parallax-window .bText.mainbText p {
+    font-size: 1.2vw;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.parallax-window .bText.mainbText img {
+    width: 12vw;
+}
+
+/* 그래프 영역 */
+.back {
+    position: relative;
+    background: url(../img/main/bb.jpg) no-repeat;
+    background-size: cover;
+    padding: 100px 50px;
+    transition: .4s ease;
+}
+.back::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255,0.8);
+}
+.mainCon:hover #lineAni{
+    stroke-dasharray: 800;
+    stroke-dashoffset: 0;
+    animation: line 3s 0.8s ease-in-out forwards;
+}
+.mainCon:hover #lineTo {
+    animation: lineTo 0.8s 0.8s ease-in-out forwards;
+    opacity: 0;
+}
+.point {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+}
+.mainCon:hover .point{
+    animation: lineTo 3s 0.8s ease-in-out forwards;
+}
+.ceoMe > svg {
+    width: 65%;
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translateX(-50%);
+    height: 90%;
+}
+
+.pathAni {
+    position: relative;
+    z-index: 1;
+    padding: 80px 50px;
+    height: 58vh;
+    transition: .4s ease;
+}
+.path {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background: rgba(255,255,255,0.95);
+    padding: 50px;
+    top: 0;
+    left: 0;
+    border-radius: 15px;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.018), 0 4px 4px rgba(0,0,0,0.048);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .path li {
+    background-color: #4dc6ff;
+} */
+
+/* .logoT {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    font-size: 4vw;
+}
+
+.logoT img {
+    width: 12vw;
+    margin-left: 2vw;
+}
+
+
+.mainCon:hover .logoT img {
+    animation: dance .6s ease-in forwards;
+}
+
+.mainCon:hover .path li.p2 {
+    animation: p .6s .9s ease-in forwards;
+}
+
+.mainCon:hover .path li.p1 {
+    animation: p1 .5s .4s  ease-in forwards;
+}
+
+.path li.p1 {
+    width: 2px;
+    height: 100%;
+    opacity: 0;
+}
+
+.path li.p2 {
+    width: 0;
+    height: 2px;
+}
+
+.aniTxt {
+    position: absolute;
+    right: 8%;
+    bottom: 15%;
+    font-size: 45px;
+    font-weight: 400;
+    color: #444444;
+    transition: .2s ease;
+    text-align: center;
+}
+
+.pFade {
+    font-family: 'Nanum Pen Script';
+}
+
+.pFade.enName {
+    font-family: 'Fugaz One';
+}
+
+.boldT {
+    font-family: 'Nanum Pen Script';
+    font-size: 70px;
+    font-weight: 600;
+    color: #4dc6ff;
+}
+
+.mainCon:hover .scaleT1 {
+    animation: scaleT .5s ease forwards;
+}
+
+.mainCon:hover .scaleT2 {
+    animation: scaleT .5s .4s ease forwards;
+    
+}
+
+.aniTxt span {
+    opacity: 0;
+}
+
+.mainCon:hover .pFade {
+    animation: lineTo 1s .6s ease-in-out forwards;
+} */
+
+/* ceo 인사말 */
+.ceoMe {
+    margin: auto;
+    width: 60%;
+    text-align: right;
+    transition: .2s ease;
+}
+
+.ceoMe h3 {
+    /* font-family: 'Nanum Pen Script'; */
+    font-size: 50px;
+}
+
+.ceoImg {
+    position: relative;
+}
+
+.ceoTxt {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+}
+
+.conText {
+    /* font-family: 'Nanum Pen Script'; */
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.ceoTit {
+    /* font-family: 'Fugaz One'; */
+    font-size: 55px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #4dc6ff;
+    margin-bottom: 30px;
+}
+
+.ceoHlt {
+    /* color: #4dc6ff;  */
+}
+
+.ceoSm{
+    /* font-family: 'Fugaz One'; */
+    font-weight: 600;
+    font-size: 20px;
+}
+
+/* 지도 애니메이션 */
+
+.map {
+    position: relative;
+}
+
+.map_ani {
+    filter: invert(61%) sepia(72%) saturate(657%) hue-rotate(171deg) brightness(148%) contrast(75%);
+    opacity: 0.15;
+}
+
+/* 조직도 */
+.mainCon.organ {
+    background: linear-gradient( 150deg, #ffffff, #a3d9ff);
+    text-align: center;
+}
+
+.ceoMe.organCon {
+    text-align: center;
+    /* background: rgba(255,255,255,0.9); */
+    border-radius: 10px;
+}
+
+.organCon img {
+    width: 95%;
+}
+
+/* 그래프 애니메이션 */
+@keyframes p {
+    form{
+        width: 0;
+    }
+    to {
+        width: 100%;
+        opacity: 0.8;
+        box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+    }
+}
+
+@keyframes p1 {
+    form{
+        height: 0;
+    }
+    to {
+        height: 100%;
+        opacity: 0.8;
+        box-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+    }
+}
+@keyframes line {
+    from{
+        stroke-dashoffset: 800;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes lineTo {
+    0%{
+        opacity: 0;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes dance {
+    30%{
+        transform:rotate(-5deg);
+        filter: invert(0.8);
+    }
+    50%{
+        transform: rotate(5deg);
+    }
+    
+    70%{
+        transform: rotate(-5deg);
+    }
+
+    90%{
+        transform: rotate(2deg);
+    }
+    
+}
+
+@keyframes scaleT {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/* 지도애니메이션 */
+
+@keyframes light {
+    100%{
+        transform: scale(3);
+        opacity: 0;
+}
+}
+
+@keyframes light2 {
+    100%{
+        transform: scale(5);
+        opacity: 0;
+}
+}
+
+@keyframes light3 {
+    100%{
+        transform: scale(8);
+        opacity: 0;
+}
+}
+
+/* 반응형 */
+@media (max-width : 1600px) {
+    .ceoMe {
+        width: 80%;
+    }
+}
+
+@media (max-width : 1050px) {
+    .mainCon, .back {
+        padding: 100px 30px;
+    }
+    .ceoMe {
+        width: 100%;
+    }
+    .ceoTxt {
+        position: relative;
+    }
+    /* .aniTxt {
+        font-size: 18px;
+    }
+    .boldT {
+        font-size: 25px;
+    } */
+    .parallax-window .bText.mainbText {
+        top: 50%;
+    }
+
+}
+
+@media (max-width : 768px) {
+    .parallax-window .bText.mainbText img {
+        width: 100px;
+    }
+    .parallax-window .bText.mainbText h2 {
+        font-size: 18px;
+    }
+    .parallax-window .bText.mainbText p {
+        font-size: 12px;
+    }
+    .mainCon, .back {
+        padding: 50px 30px;
+    }
+    .mainCon h3 {
+        font-size: 5.5vw;
+        line-height: normal;
+    }
+    .ceoMe h3 {
+        font-size: 6vw;
+    }
+    .path {
+        padding: 30px;
+    }
+    .pathAni {
+        height: 50vh;
+    }
+    .aniTxt {
+        right: 10%;
+        bottom: 15%;
+        font-size: 5.5vw;
+    }
+    .aniTxt {
+        line-height: 6vw;
+    }
+    .ceoTit {
+        font-size: 7vw;
+        margin-bottom: 20px;
+    }
+    .pFade.enName {
+        font-size: 6vw;
+    }
+    .boldT {
+        font-size: 6.5vw;
+    }
+    .ceoSm {
+        font-size: 15px;
+    }
+    .conText {
+        font-size: 14px;
+    }
+}
+
+@media (max-width : 550px) {
+    .pathAni {
+        height: 40vh;
+    }
+}

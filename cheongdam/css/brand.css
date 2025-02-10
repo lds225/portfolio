@@ -1,0 +1,405 @@
+/* banner */
+
+.bg{
+    background-image: url(../img/brand/sm3.jpg);
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+    
+
+
+
+
+
+/* brand story  */
+
+
+.bss h3 {
+    text-align: center;
+    margin-top: 100px;
+    color: #0451a3;
+    font-size: 55px;
+}
+.slogan {
+    font-size: 35px;
+    text-align: center;
+    padding: 50px 0 40px 0;
+}
+
+
+.bss ul {
+    text-align: center;
+    margin: 100px 0 50px 0;
+}
+
+.bss ul li{
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.bss ul li:last-child p{
+    margin-top: 35px;
+    color: #555555;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.bss p img{
+    width: 100%;
+}
+
+.bid {
+    padding: 80px 0;
+    margin: auto;
+    position: relative;
+   
+}
+
+
+.bid h3 {
+    font-size: 25px;
+    color: #444444;
+    margin-bottom: 30px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.bid .zoom > p{
+    text-align: center;
+}
+
+.bid .bicon {
+    margin: auto;
+    width: 850px;
+    display: flex;
+    position: relative;
+    top: -140px;
+    color: #fff;
+    font-size: 18px;
+    overflow: auto;
+    clear: both;
+}
+
+.bid .bicon li{
+    width: 225px;
+    text-align: center;
+}
+
+.bex{
+    width: 1500px;
+    margin: auto;
+    padding-top: 50px;
+}
+
+.bex li{
+    display: flex;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.bex li:last-child{
+    margin-bottom: 0;
+}
+
+.bex div{
+    width: 750px;
+    height: 500px;
+}
+
+.bex li > div > img{
+    width: 95%;
+}
+
+
+.bex li div ul{
+    width: 100%;
+    text-align: left;
+    font-size: 18px;
+    color: #686868;
+    padding: 130px 70px 70px 70px;
+}
+
+.bex li div ul li:first-child p{
+    color: #222222;
+    font-size: 35px;
+    font-weight: 600;
+    padding-right: 10px;
+    margin-bottom: 20px;
+}
+
+.bex li div ul li span{
+    position: relative;
+    top: 7px;
+}
+
+/* .bex1{
+    color: #2856BC;
+}
+
+.bex2{
+    color: #18C4C4;
+}
+
+.bex3{
+    color: #F2256F;
+}
+
+.bex4{
+    color: #FF9100;
+} */
+
+
+
+/* 오시는 길 */
+
+
+.box iframe{ 
+    margin-top: 50px;
+    width: 100%;
+    padding: 20px;
+    height: 500px ;
+    border: 0;
+}
+
+.brt{
+    font-size: 0;
+    margin-top: 10px;
+}
+
+.brt ul{
+    display: block;
+    width: 100%;
+    height: 300px;
+    text-align: left;
+    margin: 20px;
+    padding: 30px;
+    font-size: 16px;
+    border: 2px solid #0451a3;
+    border-radius: 2px;
+    box-shadow: 4px 4px 5px #d4d4d4;
+
+}
+
+.brt ul li{
+    width: 100%;
+}
+
+.brt > div {
+    width: 50%;
+    display: inline-flex;
+}
+
+.brt ul li i {
+    padding-right: 5px;
+}
+
+.tt {
+    color: #0451a3;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.stt{
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 15px 0 2px 0;
+}
+
+.add ul li:nth-child(2), .add ul li:nth-child(3){
+    padding-left: 20px;
+}
+
+.go ul li:nth-child(2) p{
+    letter-spacing: -0.7px;
+}
+
+.go ul li:nth-child(2), .go ul li:nth-child(3){
+    padding-left: 25px;
+}
+
+.find h3 {
+    text-align: center;
+    margin-top: 100px;
+    color: #0451a3;
+    font-size: 55px;
+}
+.find {
+    margin-bottom: 100px;
+}
+
+
+
+@media(max-width : 1280px){
+    .wrap{
+        width: 100%;
+    }
+    .bg{
+        background-image: url(../img/brand/sm3-1.jpg);
+        height: 350px;        
+    }
+    .bex{
+        width: 100%;
+        padding: 50px;
+    }
+    .bex div{
+        width: 50%;
+        height: 400px;
+    }
+    .bex li div ul{
+        padding: 50px 30px 20px 50px;
+    }
+    .bex li > div > img{
+        width: 100%;
+    }
+}
+
+@media(max-width:1050px){
+    .bid{
+        padding: 80px 0 0 0;
+    }
+    .bex div{
+        height: 330px;
+    }
+    .bex li div ul{
+        font-size: 16px;
+    }
+    .bex li div ul{
+        padding: 40px 27px 20px 35px;
+    }
+    .bex li div ul li:first-child p{
+        font-size: 25px;
+    }
+    .bex li div ul li span img{
+        width: 25px;
+    }
+    .slogan{font-size: 25px;}
+    
+    
+    .brt > div { width: 100%; }
+
+}
+
+
+
+@media(max-width :  900px){
+    
+    .zoom{
+        display: none;
+    }
+    
+
+}
+
+@media(max-width :  768px){
+    .bg{
+        background-image: url(../img/brand/sm3-2.jpg);
+        height: 300px;        
+
+    }
+    .slogan{font-size: 22px;}
+    .bex li>div{
+        width: 55%;
+    }
+    
+    .bex li{
+        text-align: center;
+    }
+   
+    .bex li>div { width: 100%;}
+    .bex li div ul{
+        padding : 25px 38px 13px 20px;
+    }
+    .bex li{ display: grid;}
+    .bex li div ul li span{ top: 0;}
+    .bex li div ul li:first-child p{ font-size: 20px; padding-right: 0;} 
+    .bss h3{
+        margin-top: 70px;font-size: 40px; padding-top: 100px;
+    }
+    .bss ul li {font-size: 18px;}
+    .bss ul li:last-child p{ font-size: 16px;}
+    .find h3{ font-size: 40px; margin-top: 70px; padding-top: 100px;}
+    .bex li > div > img{
+        width: 70%;
+        text-align: center;
+    }
+    .bex li:nth-child(4) > div:nth-child(1){
+        order: 2;
+    }
+    .bex li:nth-child(2)> div:nth-child(1){
+        order: 2;
+    }
+
+
+}
+@media(max-width :  550px){
+    .bg{
+        background-image: url(../img/brand/sm3-3.jpg);
+        height: 250px;        
+
+    }
+    .bss h3{
+        font-size: 25px;
+        margin-top: 50px;
+        padding-top: 50px;
+    }
+    .slogan{
+        font-size: 20px;
+        padding: 20px 60px;
+    }
+    .bss ul { margin: 50px 0;}
+    .bss ul li{ font-size: 16px;}
+    .bss ul li:first-child{ padding: 0 42px;}
+    .bss ul li:last-child p{
+        padding: 0 50px;
+        font-size: 14px;
+    }
+    .bid{padding: 0;}
+    .bid h3{ font-size: 22px;}
+    .bex{ padding: 15px 0;}
+    .bex div { height: 225px;}
+    .bex li{
+        padding: 0 5px;
+    }
+    .bex li div ul li span{ top: -2px;}
+    .bex li > div > img{ width: 80%;}
+    .bex li div ul li:first-child p{ margin-bottom: 25px;}
+    .bex li div ul li:last-child p {
+        padding: 0 20px;
+    }
+    .bex li div ul{  padding: 0; font-size: 14px;}
+    .brt ul{
+        font-size: 12px;
+    }
+    .tt{
+        font-size: 18px;
+    }
+
+    .stt{
+        font-size: 14px;
+    }
+    .brt ul { margin: 15px; padding: 15px; height: 260px;}
+    .brt > div > ul li:nth-child(2) > p{
+        line-height: 22px; 
+    }
+    .go ul li:nth-child(2), .go ul li:nth-child(3),.add ul li:nth-child(2), .add ul li:nth-child(3){
+        padding-left: 0;
+    }
+    .find {margin-bottom: 50px;}
+    .find h3{ font-size: 25px;  padding-top: 50px;}
+    .box iframe { margin-top: 20px;}
+}
+
+@media (min-width : 400px){
+    .bex li:nth-child(1) > div:nth-child(1),
+    .bex li:nth-child(2) > div:nth-child(2),
+    .bex li:nth-child(3) > div:nth-child(1),
+    .bex li:nth-child(4) > div:nth-child(2){
+        margin-bottom: 80px;
+    }
+}
+
+
+
+

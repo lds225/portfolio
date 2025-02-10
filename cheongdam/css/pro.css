@@ -1,0 +1,189 @@
+/* bg */
+
+.bg{
+    top: 100px;
+    width: 100%;
+    height: 400px;
+    background-image: url(../img/start/b1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.bg {
+    text-align: center;
+    padding-top: 165px;
+    font-size:35px;
+    font-weight: 400;
+    color: #fff;
+    font-style: oblique;
+}
+
+.bg p{
+    font-size: 22px;
+    font-style: initial;
+    font-weight: 300;
+}
+.bg p, .bg h3{
+    position: relative;
+    z-index: 2;
+}
+
+.bg::after{
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+}
+
+/* box 1 */
+.box h3{
+    text-align: center;
+    font-size:55px;
+    font-weight: 600;
+    padding-top: 100px;
+    color: #355A92;
+    margin-bottom: 50px;
+}
+
+/* 프로모션 */
+.pro_img { width: 100%; text-align: center; margin-bottom: 100px;}
+.pro_img img{ max-width: 100%; margin: auto;}
+
+/* box2 창업절차 */
+.step_img {text-align: center; margin-bottom: 100px;}
+.step_img img{ max-width: 100%; margin: auto;}
+.mstep_i { display: none; }
+
+/* 자주묻는질문 탭메뉴 */
+.tabm {display: grid; width: 80%;  margin: auto; margin-bottom: 25px;  grid-template-columns: 1fr 1fr 1fr 1fr;}
+.tabm li {width: 100%; text-align: center;  padding: 10px 0; font-size : 18px;  cursor: pointer;  border-bottom: 1px solid #ddd ;}
+.tabs.pick{
+    background-color: #355A92;
+    color: #fff;
+    border: 1px solid #355A92;
+}
+.tab-con{
+    display: none;
+}
+.tab-con.pick{
+    display: block;
+}
+/* 자주 묻는 질문 */
+.faq { margin: auto; padding: 0 50px;  }
+.faq .faq-con {border-top: 2px solid #222222; border-bottom: 2px solid #222222; margin-bottom: 100px;}
+.faq-con li > div { display: table; border-bottom: 1px solid #ddd;}
+.faq-con li .que { padding: 15px 110px 15px 50px ; position:relative; cursor: pointer; font-size: 18px;}
+.faq-con li .ans { padding: 15px 80px 15px 50px; position: relative; font-size: 16px; width: 100%; background-color: rgb(248, 248, 248); display: none; }
+.MsoNormal { padding-left: 32px;}
+.faq-con li .que::after {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    background-image: url(../img/start/faq.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: "";
+    width: 25px;
+    height: 25px;
+    margin-top: -5.5px;
+}
+
+.faq-con li .que.on {
+    color: #355A92;
+}
+
+.faq-con li .que.on:after{
+    background-image: url(../img/start/faq.png);
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: "";
+    transform: rotate(180deg);
+
+}
+.faq-con li .que p {
+    width: 100%;
+    padding-left: 30px;
+    display: table-cell;
+    vertical-align: middle;
+}
+.faq-con li .ans p{ width: 100%; vertical-align: middle; color: #444444;}
+.faq-con li .que span{
+    display: table-cell; font-size: 30px;
+}
+.faq-con li .ans > span{
+    display: table-cell;
+    font-size: 30px;
+    color: #f57dbf;
+}
+
+/* 상담문의 */
+.que_img { width: 100%; text-align: center; margin-bottom: 100px;}
+.que_img img{ max-width: 100%; margin: auto;}
+
+
+@media(max-width : 1280px){
+    .bg{ height: 350px; padding-top: 120px; top: 100px;}
+    .wrap{width: 100%;}
+
+}
+
+@media(max-width : 1050px){
+    .bg{ top: 80px;}
+    .tabm{ width: 85%;}
+}
+
+@media(max-width : 768px){
+    .bg{ height: 300px; padding-top: 100px; }
+    .bg h3{ font-size: 30px;}
+    .bg p{ font-size: 18px; padding: 0 30px;}
+    .step_i{ display: none;}
+    .step_img { padding: 0 15px;}
+    .mstep_i { display: block;}
+    .pro_img { padding: 0 15px; } 
+    .que_img { padding: 0 15px; } 
+    .tabm{ width: 100%;}
+    .tabm li {font-size: 16px;}
+    .faq-con li .que { font-size: 16px}
+    .faq-con li .que span { font-size: 23px; }
+    .faq-con li .que::after{
+        width: 22px; height: 22px;
+    }
+    .faq-con li .ans { font-size: 16px;}
+    .faq-con li .ans > span { font-size: 23px;}
+    .faq { padding: 0 25px;}
+
+
+
+    
+}
+
+@media(max-width : 550px){
+    .bg{ height: 250px; top: 70px; padding-top: 90px;}
+    .bg h3{ font-size: 22px;  font-weight: 500;}
+    .bg p{ font-size: 16px; padding: 0 30px;}
+    .box h3{ font-size: 25px;padding-top: 50px; margin-bottom: 20px; }
+    .step_img { margin-bottom: 50px;}
+    .pro_img { margin-bottom: 50px;}
+    .que_img { margin-bottom: 50px;}
+    .faq { padding: 0 15px;}
+    .faq-con li .que { font-size: 14px}
+    .faq-con li .que span { font-size: 20px; }
+    .faq-con li .que::after{
+        width: 18px; height: 18px; right: 25px;
+    }
+    .faq-con li .ans { font-size: 14px;}
+    .faq-con li .ans > span { font-size: 20px;}
+    .faq { padding: 0 15px;}
+    .faq-con li .que { padding: 15px 55px 15px 10px; }
+    .faq-con li .que p { padding-left: 15px;}
+    .tabm { grid-template-columns: 1fr 1fr; margin-bottom: 15px}
+    .tabm li { font-size: 14px;}
+}
+
+
+

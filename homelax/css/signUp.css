@@ -1,0 +1,41 @@
+.wrap>p:first-child{padding-top: 36px; padding-left: 100px;}
+p{font-size: 15px;}
+h2{font-size: 28px; font-weight: 600; padding-left: 586px; padding-top: 98px; padding-bottom: 45px;}
+form{width: 935px; margin: auto; position: relative;}
+label{font-size: 16px;}
+input{margin-left: 126px; width: 284px; height: 35px; border: 1px solid #8C8681;margin-bottom: 30px;}
+input[id=fId]{margin-left: 126px;}
+input[id=fPw]{margin-left: 108px;}
+input[id=fPw2]{margin-left: 71px;}
+input[id=name]{margin-left: 138px;}
+input[id=adress]{margin-left: 138px;}
+input[id=adress2]{margin-left: 102px;}
+input[id=adress3]{margin-left: 102px;}
+input[id=emali]{width: 175px; height: 40px;}
+input[name=tel]{width: 107px; height: 40px; margin-right: 5px;}
+input[id=tel]{margin-left: 126px;}
+input[id=tel2]{margin-left: 5px;}
+input[id=tel3]{margin-left: 5px;}
+button[type=button]{width: 128px; height: 36px; border: 1px solid #8C8681;background-color: transparent; font-size: 16px; font-family: inherit;font-weight:400;color: #8C8681;}
+button[id=btn1]{position: absolute; top: 0; left: 480px;}
+button[id=btn2]{position: absolute; top: 268px; left: 480px;}
+.row{display: block;}
+form p{display: inline;color: #8C8681;padding-left: 17px;}
+select{border: 1px solid #8C8681; font-size: 15px;}
+select[id=emali2]{width: 176px; height: 40px; padding-left: 15px;}
+select[id=year]{margin-left: 108px; width: 114px; height: 40px; padding-left: 10px; margin-right: 33px;}
+select[id=month]{width: 94px; height: 40px; padding-left: 10px; margin-right: 33px;}
+select[id=day]{width: 94px; height: 40px; padding-left: 10px;}
+/*.box input[type=checkbox]{visibility: hidden;}
+.box input[type=checkbox]:checked+span{background: red;}*/
+.box input[id=em]{margin-left: 10px;}
+.box input[id=sns]{margin-left: 10px;}
+
+
+label[id=emali]{display: block;}
+.p1{position: absolute; top: 7px; left: 610px;}
+
+.box{width: 670px; height: 336px; margin: 67px auto; background-color: #869EA7;}
+.box p{color: #2F3540; display: block; width: 420px; margin-left: 110px;}
+.box input{width: 13px; height: 13px; margin-top: 33px; margin-right: 10px;}
+#btn3{width: 225px; height: 66px; background-color: #2F3540; font-size: 20px; color: #fff; font-family: inherit; border: 0; margin: 19px 0 117px 0; margin-left:360px;}

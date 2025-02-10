@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+*{padding: 0; margin: 0;}
+body{font-family: "Noto Sans KR", "Anton", sans-serif;
+	color: #141414;
+}
+a{text-decoration: none; color: inherit; cursor: pointer;}
+li{list-style: none;}
+h3{display: none;}
+
+section{width: 100%;}
+.set1{height: 800px;}
+
+
+header{height: 100px;/* background-color:#db0d0d;*/
+	display: flex; align-content:center; justify-content: space-between;  
+}
+header h1{font-family: "Anton"; color: #db0d0d; padding-top: 15px; padding-left: 30px; font-size: 50px; }
+header p{font-size:25px; border: 3px solid #db0d0d; height: 35px;width: 70px;text-align: center; border-radius: 5px; margin-top: 30px;margin-right: 20px;}
+header p a{color: #db0d0d; font-weight: 600; width: 100%; display: block;}
+
+.set1{background-image: url(./img/main2.png);
+	background-repeat: no-repeat; background-size: cover;
+} 
+.set1 .tBox{width: 100%; height: 500px; text-align: center;padding-top: 300px; margin: auto; background-color: rgba(0,0,0,0.4); color: #fff;}
+.set1 .tBox p:first-child{font-size: 60px; font-weight: 500;} 
+.set1 .tBox p:last-child{margin-top: 35px;} 
+.set1 .tBox a{font-size: 25px; font-weight: 400; background-color: #db0d0d; width: 150px; padding: 10px 15px; border-radius: 2px; /*box-shadow: inset -2px -2px 3px rgba(0,0,0,0.3);*/} 
+
+.red{color:#db0d0d; }
+.anton{font-family: "Anton";}
+
+.set2 {display: flex; justify-content: center; align-content: space-around; }
+.set2 >div{padding: 160px 0;}
+.set2 .iBox {width: 550px; padding-right: 20px;}
+.set2 .iBox img{width: 100%;}
+.set2 .tBox{padding-left: 50px;}
+.set2 .tBox p{font-size: 40px; font-weight: 500; }
+.set2 .tBox p:last-child{font-size:25px; font-weight: 400;}
+
+.set3 {display: flex; justify-content: center; align-content: space-around; background-color: #000; position: relative; }
+.set3 >div{padding: 160px 0;}
+.set3 .iBox {width: 400px; padding-left: 50px;}
+.set3 .iBox img{width: 100%;}
+.set3 .tBox{padding-left:50px; padding-right: 50px; color: #fff;}
+.set3 .tBox p{font-size: 40px; font-weight: 500; }
+
+.set3 .tBox p:last-child{font-size:25px; font-weight: 400;}
+
+.set4 {display: flex; justify-content: center; align-content: space-around; }
+.set4 >div{padding: 160px 0;}
+.set4 .iBox {width: 650px;}
+.set4 .iBox img{width: 100%;}
+.set4 .iBox{padding-left: 10px;}
+.set4 .tBox{ padding-left: 50px;padding-right: 50px;}
+.set4 .tBox p{font-size: 40px; font-weight: 500; }
+.set4 .tBox p:nth-child(2){font-size:20px; font-weight: 400;}
+.set4 .tBox p:nth-child(3){font-size: 25px; }
+.set4 .tBox .click p{float: right; font-size:25px; padding: 5px; margin-top: 10px;}
+.set4 .tBox .click .ht{color:#db0d0d;  }
+.set4 .tBox .click .bt a{color: #fff; background-color: #db0d0d ;padding: 3px 8px; border-radius: 3px; font-size:18px;}
+
+.set5 {display: flex; justify-content: center; align-content: space-around; background-color: #000; position: relative; }
+.set5 >div{padding: 160px 0;}
+.set5 .iBox {padding-left: 50px; width: 600px;}
+.set5 .iBox img{width: 100%;}
+.set5 .tBox{padding-left: 50px; padding-right: 150px; color: #fff;}
+.set5 .tBox p{font-size: 40px; font-weight: 500; }
+.set5 .tBox p:nth-child(2){font-size:20px; font-weight: 400;}
+.set5 .tBox p:nth-child(3){font-size: 25px; }
+.set5 .tBox .click p{float: left; font-size:25px; padding: 5px; margin-top: 10px;}
+.set5 .tBox .click .ht{color:#db0d0d;  }
+.set5 .tBox .click .bt a{color: #fff; background-color: #db0d0d;padding: 3px 15px; border-radius: 3px; font-size:18px; font-weight: 400; }
+
+
+.sm{font-size: 18px; font-weight: 400;}
+
+.wrap{width: 100%; background-color: #000; padding-bottom: 100px;}
+.faq{width: 60%; margin: auto; background-color: #000;padding: 50px 0; }
+.faq h2{color: #fff; text-align: center; font-size: 35px; font-weight: 500;margin-bottom: 25px;}
+.go p{color: #fff; text-align: center; font-size: 25px; background-color: #000;}
+.go p:first-child{padding-bottom: 20px;}
+.go a{color: #fff; background-color: #db0d0d; text-align: center; font-size: 25px; padding: 5px 100px; border-radius: 2px;}
+
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 15px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 17px;
+  transition: 0.4s;
+	font-family: "Noto Sans KR";
+	margin: 5px 0;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: #ccc;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+	font-family: "Noto Sans KR";
+}
+
+.faq{height: 500px;}
+
+footer{background-color: #000; border-top: 1px solid grey;  padding: 50px 0 50px 100px; overflow: auto; color: darkgrey;}
+footer ul{}
+footer ul li{float: left;padding-right: 10px;}
+footer ul li a{}
+
+
+
+@media all and (max-width:720px){
+	header{height: 60px; padding-bottom: 10px;
+	}
+	header h1{font-size: 30px; }
+	header p{font-size:15px; border: 2px solid #db0d0d; height: 23px;width: 55px;text-align: center; border-radius: 5px; margin-top: 25px;margin-right: 20px;}
+	
+	.set2 >div{padding: 80px 0;}
+	.set3 >div{padding: 80px 0;}
+	.set4 >div{padding: 80px 0;}
+	.set5 >div{padding: 80px 0;}
+	
+	.set1{height: 600px;}
+	.set1 .tBox{height: 400px; padding-top: 200px;}
+	.set1 .tBox p:first-child{font-size: 35px; } 
+	.set1 .tBox a{font-size: 15px;} 
+	.set2 >div{padding: 80px 0;}
+	.set2 .tBox p{font-size: 20px; }
+	.set2 .tBox p:last-child{font-size:15px; }
+	.set3 .tBox p{font-size: 20px;}
+	.set3 .tBox p:last-child{font-size: 15px;}
+	
+	.set4 .tBox{width: 400px; padding-right: 0;}
+	.set4 .iBox{width: 600px; padding-right: 10px;}
+	
+	
+	.set4 .tBox p{font-size: 20px; font-weight: 500; }
+	.set4 .tBox >p:nth-child(2){display: none;}
+	.set4 .tBox p:nth-child(3){font-size: 15px; }
+	.set4 .tBox .click p{float: right; font-size:25px; padding: 5px; margin-top: 10px;}
+	.set4 .tBox .click .ht{color:#db0d0d; font-size: 15px; position: relative; top: 10px;}
+	.set4 .tBox .click .bt a{font-size:15px;}
+	
+	.set5 .iBox{padding-left: 40px; }
+	.set5 .tBox{width: 600px; padding-right: 20px; padding-left: 20px;}
+	.set5 .tBox p{font-size: 20px; font-weight: 500; }
+	.sm{font-size: 6px;}
+	.set5 .tBox p:nth-child(2){font-size:10px; font-weight: 400;}
+	.set5 .tBox p:nth-child(3){font-size: 15px; }
+	.set5 .tBox .click p{float: left; font-size:15px; padding: 5px; margin-top: 10px;}
+	.set5 .tBox .click .ht{color:#db0d0d;  }
+	.set5 .tBox .click .bt a{font-size:15px; padding: 2px 10px; }
+	.sm{display: none;}
+	footer{padding:0; width: 100%; overflow: auto;}
+	footer ul{width: 100%; padding: 20px 0; font-size: 12px; display: flex; justify-content: space-around; align-content: center; align-items: center; }
+	footer ul li {padding: 0;text-align: center;}
+	footer ul li:first-child {padding-left: 50px;}
+	
+	
+	
+	
+	.faq h2{color: #fff; text-align: center; font-size: 20px; }
+	.go p{font-size: 15px;}
+
+	.go a{ font-size: 15px; padding: 5px 60px; border-radius: 2px;}
+
+	.accordion{font-size: 14px;}
+	.panel{font-size: 14px;}
+}
+
+@media all and (max-width:375px){
+	
+
+	
+	.set2{display: block;}
+	.set2 .tBox{padding: 50px 20px 0 20px;}
+	.set2 .iBox img{width: 55%; padding-left: 25px;  }
+	.set2 .iBox{padding: 15px 0 50px 0;}
+	
+	.set3{display: block;}
+	.set3 .tBox{padding: 15px 20px 50px 20px;}
+	.set3 .iBox img{width: 65%; padding-left: 50px;  }
+	.set3 .iBox{padding: 50px 0 0 0;}
+	
+	.set4{display: block;}
+	.set4 .tBox{padding:50px 20px 10px 20px;}
+	.set4 .tBox .click p{float: left; padding-left: 0;}
+	.set4 .iBox img{width: 55%; padding-left: 20px; }
+	.set4 .iBox{padding: 70px 0;}
+	
+	.set5{display: block; padding-bottom: 30px;}
+	.set5 .tBox{padding: 15px 10px 50px 40px;}
+	.set5 .iBox img{width: 55%; padding-left: 20px; }
+	.set5 .iBox{padding: 50px 0 0 0;}
+	
+	.faq h2{color: #fff; text-align: center; font-size: 15px; }
+	.go p{font-size: 14px;}
+
+	.go a{ font-size: 14px; padding: 5px 5px; border-radius: 2px;}
+
+	.accordion{font-size: 12px;}
+	.panel{font-size: 12px;}
+	.faq{width: 70%;}
+
+}

@@ -1,0 +1,28 @@
+.hide{display: none;}
+.wrap{}
+.slide{clear: both; width: 100%; height: 400px; overflow: hidden;}
+.wrap .slide ul{width: 2000px;}
+.slide ul li{}
+.slide li img{float: left;}
+
+#event{margin-bottom: 51px;}
+#event .a1{}
+#event .a1 a{display: block;}
+#event img{padding-top: 50px; padding-left: 240px; position: relative;}
+#event .a1>p{position: absolute; top: 700px; left: 310px;}
+#event .a2>p{position: absolute; top: 1119px; left: 265px; border: 1px solid lightgray; cursor: pointer;}
+#event p{width: 224px; height: 66px; background-color: #fff; line-height: 66px; text-align: center;}
+
+#best{width: 100%; height: 1156px;background-color: #F2EDE4; padding-top: 50px;overflow: auto;}
+#best h2{font-size: 30px; font-weight: bold; padding-left: 608px; padding-bottom: 30px;}
+#best article a{display: block;}
+#best article a img{width: 300px;margin-bottom: 30px;}
+#best article p:last-child{border-top: 1px solid lightgray;padding-top: 15px;font-size: 20px; font-weight: bold;}
+#best article p:first-child{padding-bottom: 15px;font-size: 20px; font-weight: 120;}
+#best article{width: 250px; height: 400px;float: left; padding-right: 120px;text-align: center; margin-bottom: 50px;}
+#best .b1 article:first-child{padding-left: 120px;}
+#best .b2 article:first-child{padding-left: 120px;}
+
+#best .b2{position: relative;}
+#best button{clear: both; position: absolute;top: 2314px; left: 1025px;
+width: 135px; height: 38px; background-color: #fff;border: 0;font-size: 17px; font-family: Noto Serif KR;font-weight: 300; cursor: pointer;}

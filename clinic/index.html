@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>라움클리닉</title>
+	<link rel="stylesheet" href="css/index.css">
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="js/index.js"></script>
+	
+</head>
+<body>
+	<header>
+	<ul class="top">
+		<li><button class="smBtn"><img src="img/i-menu.png" alt="메뉴"></button></li>
+		<li><h1><a href="index.html"><img src="img/tp-logo.png" alt="라움클리닉"></a></h1></li>
+		<li><a href="login.html"><img src="img/i-my2.png" alt="마이페이지"></a></li>
+	</ul>
+	</header>
+	
+<!--	슬라이드-->
+	 <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><a href="event1.html"><img src="img/ban1.png" alt="피부재생힐러이벤트"></a></div>
+      <div class="swiper-slide"><a href="event2.html"><img src="img/ban2.png" alt="오픈이벤트"></a></div>
+      <div class="swiper-slide"><a href="event3.html"><img src="img/ban3.png" alt="라움클리닉"></a></div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+   <script>
+       var swiper = new Swiper('.swiper-container', {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+  
+  <section>
+  	<h3>BEST 클리닉</h3>
+  	<ul>
+  		<li><a href="#"><img src="img/best1.png" alt="얼굴축소"></a><a href="menu2-1.html">얼굴 축소</a></li>
+  		<li><a href="#"><img src="img/best2.png" alt="미백/화이트닝"></a><a href="menu1-3.html">미백/화이트닝</a></li>
+  		<li><a href="#"><img src="img/best3.png" alt="전신관리"></a><a href="menu3-3.html">전신 관리</a></li>
+  		<li><a href="#"><img src="img/best4.png" alt="피부재생"></a><a href="menu1-7.html">피부 재생</a></li>
+  	</ul>
+  </section>
+  
+  <!--바텀 고정 메뉴-->
+  <nav>
+  	<ul class="btm-me">
+  		<li><a href="index.html"><img src="img/i-home2.png" alt="홈"><br>홈</a></li>
+  		<li><a href="event.html"><img src="img/i-event1.png" alt="이벤트"><br>이벤트</a></li>
+  		<li><a href="order.html"><img src="img/i-cs1.png" alt="예약/상담"><br>예약/상담</a></li>
+  		<li><a href="review.html"><img src="img/i-re1.png" alt="시술후기"><br>시술후기</a></li>
+  	</ul>
+  </nav>
+  
+  
+  <div id="bg">
+  	<div class="sideM">
+  	<ul>
+  		<li>메뉴</li>
+  		<li><a href="brand.html">라움클리닉 소개</a></li>
+  		<li><a href="menu1.html">클리닉 안내</a></li>
+  		<li><a href="event.html">이벤트</a></li>
+  		<li><a href="review.html">시술후기</a></li>
+  		<li><a href="order.html">예약/상담</a></li>
+  	</ul>
+  	<button class="del"><img src="img/del.png" alt="닫기"></button>
+  	</div>
+  </div>
+  
+  
+</body>
+
+</html>

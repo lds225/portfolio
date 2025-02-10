@@ -1,0 +1,989 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/* reset */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body,button,a,input {
+    font-family: "Noto Sans KR", '맑은 고딕', sans-serif;
+    color: #444444;
+    overflow: auto;
+}
+
+html,body{
+    position: relative;
+
+}
+body{
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    border-radius: 4px;
+}
+
+ul {
+    list-style: none;
+}
+
+button{
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 4px;
+    outline: none;
+}
+
+.hide{display: none;}
+
+.wrap{
+    width: 1280px;
+    margin: auto;
+}
+
+
+::selection {
+    background-color: rgb(109, 168, 228);
+   color: #fff;
+}
+/* navigator */
+
+header{
+    width: 100%;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    z-index: 40;
+    transition: .3s ease-in-out;
+}
+
+
+header.shrink{
+   height: 70px; 
+}
+ 
+header.shrink .menu h3{
+    margin-top: 14px;
+}
+
+header.shrink .menu .main {
+    margin-top: 22px;
+}
+
+.menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.menu h3{
+    margin-top: 8px;
+    margin-left: 20px;
+    position: relative;
+    transition: .3s ease-in-out;
+}
+
+
+.menu h3 a{
+    width: 100%;
+    display: block;
+}
+
+#slogo{
+    display: none;
+}
+
+
+header .menu .main{
+   margin-top: 38px;
+   transition: .3s ease-in-out;
+
+}
+
+header .menu .main > li{
+    float: left;
+    width: 135px;
+}
+header .menu .main > li > a {
+    font-size: 17px;
+    font-weight: 500;
+    width: 100%;
+}
+
+header .menu .main > li > a:hover{
+    transition: 0.3s ease-in-out;
+    color: #2173ca;
+}
+
+.sub{
+    width: 200px;
+    margin-top: 10px;
+    padding: 15px 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.02);
+    position: relative;
+    left: -45px;
+    z-index: 100;
+}
+
+.sub >li{
+    margin:15px 0 ;
+    height: 30px;
+}
+
+.sub >li > a{
+    color: #696969;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+    width: 100%;
+    transition: 0.3s ease-in-out;
+
+
+}
+
+.sub >li > a:hover{
+    color: #086edb;
+}
+
+.main li:nth-child(1) > .sub > li > a{
+    padding-left: 44px;
+}
+
+.main li:nth-child(2) > .sub > li > a{
+    padding-left: 44px;
+}
+
+.main li:nth-child(3) > .sub > li > a{
+    padding-left: 44px;
+}
+
+.main li:nth-child(4) > .sub > li > a{
+    padding-left: 44px;
+}
+
+.sub{
+    display: none;
+}
+
+
+
+/* mobile menu */
+
+.moMenu{
+    display: none;
+    position: fixed;
+    z-index: 40;
+    width: 100%;
+    height: 100%;
+    background-color: rgba( 0, 0, 0, 0.7);
+}
+.mMcl{
+    display: none;
+    position: fixed;
+    top: 25px;
+    left: 20%;
+    z-index: 1000;
+    margin-right: 10px;
+    width: 25px;
+    overflow: visible;
+}
+
+.bgwt{
+    width: 75%;
+    min-width: 220px;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    font-size: 18px;
+    overflow-y:auto;
+}
+
+.mMain{
+    width: 100%;
+}
+
+.moMenu p{
+    background-color: #215AAF;
+}
+
+.moMenu p a{
+    display: block;
+    width: 100%;
+    padding: 12px;
+    color: #fff;
+}
+
+.moMenu p{
+    padding: 10px 0 10px 12px;
+}
+
+.mMain > li{
+    font-weight: 400;
+}
+
+.mMain > li a{
+    padding: 12px;
+}
+.mMain > li p {
+    padding : 12px;
+    background-color: #fff;
+    border-top: 1px solid #ececec;
+    color: #444444;
+    cursor: pointer;
+}
+.mMain > li p.on{
+    color:#0451a3;
+}
+
+.mMain li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+}
+
+.mMain li > a {
+    border-top: 1px solid #ececec;
+    color: #444444;
+} 
+
+.mSub-wrap{ display: none;}
+.mSub{
+    width: 100%;
+    font-size: 16px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.mSub li{
+    width: 50%;
+}
+
+.mSub li a{
+    color: #444444;
+    font-weight: 300;
+    background-color: rgb(244, 253, 255);
+    overflow-y: hidden;
+
+}
+
+.mSub li:nth-child(1),.mSub li:nth-child(3),.mSub li:nth-child(5){
+    border-right: 1px solid #ececec;
+}
+
+.mMain > li:last-child{
+    margin-bottom: 50px;
+}
+
+/* back img */
+.banner {
+    position: relative;
+    top: 100px;
+    overflow: hidden;
+}
+
+
+/* tap menu */
+.tm{
+    margin-top: 100px;
+}
+
+.tmb{
+    background-color: rgb(235, 251, 255);
+    padding: 0 100px;
+
+}
+
+
+.tmb ul{
+    width: 100%;
+    display: flex;
+    text-align: center;
+
+}
+
+.tmb ul li{
+    width: 50%;
+}
+
+.tmb ul li a{
+    display: block;
+    width: 100%;
+    font-size: 22px;
+    padding: 18px 0;
+}
+
+.on{
+    background-color: #fff;
+    color: #222222;
+}
+
+/* counsel bar */
+
+.bar{
+    margin-top: -5px;
+    width: 100%;
+    height: 169px;
+    background: linear-gradient(to right bottom,rgba(55, 149, 237, 0.95), rgba(22, 228, 243, 0.95 ));
+    border-radius: 25px 5px 25px 25px;
+    position: fixed;
+    bottom: 0;
+    z-index: 36;
+    display: none;
+}
+
+.bar .wrap{
+    height: 100%;
+    
+}
+
+
+.bar div {
+    width: 731px;
+    height: 100%;
+    margin: auto;
+    padding: 45px 0;
+}
+
+.bar div p{
+    
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.bar div p:first-child{
+    font-size: 24px;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.nt{
+    color: #fff;
+    width: 532px;
+}
+
+.bar div .nt input::placeholder{
+    font-size: 17px;
+}
+
+.bar div .nt input{
+    width: 120px;
+    font-size: 18px;
+    padding: 5px 0;
+    border: 0;
+    text-align: center;
+    margin: 0 5px;
+    outline: transparent;
+    position: relative;
+    top: -2px;
+    height: 35px;
+    line-height: 35px;
+
+}
+
+.bar #ris{
+    margin-left: 10px;
+    color: #fff;
+    background-color: #274666;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 5px 12px;
+    position: relative;
+    top: -2px;
+}
+
+.bar #ris:hover{
+    transition: 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    background-color: rgb(8, 40, 53);
+}
+
+.per{
+    margin-top: 10px;
+    position: relative;
+    left: 14.5%;
+    color: #fff;
+}
+
+.per input{
+    margin-right: 8px;
+
+}
+
+.per .personal{
+    background-color: #fff;
+    padding: 1px 5px;
+    font-size: 12px;
+    margin-left: 6px;
+    position: relative;
+    top: 1px;
+}
+
+.cl {
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    right: 5%;
+    top: 15%;
+}
+
+.cl:hover{
+    transition: 0.2s ease;
+    color: #222222;
+}
+
+.op {
+    color: #fff;
+    position: fixed;
+    background-color: #10c7f5;
+    bottom: 110px;
+    left: 93.3%;
+    padding: 12px 9px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 25px;
+    z-index: 30;
+    text-align: center;
+}
+
+.op:hover{
+    transition: 0.3s ease;
+    background-color: #29637e;
+}
+
+.alert {
+    color: #fff;
+    font-size: 22px;
+    position: fixed;
+    background-color: #10c7f5;
+    bottom: 50px;
+    left: 93.3%;
+    padding: 9px 16px;
+    font-weight: 500;
+    border-radius: 25px;
+    z-index: 30;
+    text-align: center;
+    display: none;
+}
+
+.alert:hover{
+    transition: 0.3s ease;
+    background-color: #29637e;
+}
+
+.top{
+    cursor: pointer;
+    color: #fff;
+    position: fixed;
+    background-color: #0451a3;
+    bottom: 50px;
+    left: 93.4%;
+    padding: 7px 13px;
+    font-size: 24px;
+    border-radius: 25px;
+    z-index: 35;
+    text-align: center;
+    /* box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.2); */
+}
+
+.top img {
+    position: relative;
+    top: -3px;
+}
+
+.top:hover {
+    background-color: #444444;
+    transition: 0.3s ease;
+}
+
+
+
+
+/* footer */
+footer {
+    width: 100%;
+    height: 180px;
+    background-color: #444444;
+    
+}
+
+footer h3{
+    width: 150px; 
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+footer .f_menu{
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+footer ul {
+    width: 600px;
+    font-size: 14px;
+    color: #777777;
+
+}
+footer ul button{
+    color: #777777;
+    cursor: text;
+}
+
+
+/* login */
+.login{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 200px 0;
+    background-color: rgba( 0, 0, 0, 0.7);
+    display: none;
+}
+
+.wbg{
+    background-color: #fff;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    text-align: center;
+    position: relative;
+
+}
+
+.bbg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #0451a3;
+    width: 100%;
+    height: 60px;
+}
+
+.wbg .lg-cl{
+    font-size: 20px;
+    color: #fff;
+    position: relative;
+    left: 200px;
+    margin-top: 15px;
+}
+
+.wbg h3{
+    padding-top: 80px;
+    color: #0451a3;
+    font-size: 25px;
+    padding-bottom: 30px;
+}
+
+.wbg ul{
+    margin: auto;
+    width: 240px;
+}
+
+
+.wbg ul li {
+    border: 1px solid #0451a3;
+    margin-bottom: 10px;
+    height: 35px;
+
+}
+
+.wbg ul li:last-child {
+    border: 0;
+    background-color: #0451a3;
+
+}
+
+.wbg ul li input{
+    border: 0;
+    width: 230px;
+    padding: 5px;
+    position: relative;
+    top: 2px;
+}
+
+.wbg ul li button{
+    font-size: 16px;
+    letter-spacing: 2px;
+    border-radius: 0;
+    display: block;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    background-color: #0451a3;
+}
+
+#mme i{
+    font-size: 30px;
+    
+}
+#mme {
+    position: absolute;
+    right: 5%;
+    display: none;
+    margin-top: 35px;
+    overflow: visible;
+}
+
+.logfunc{ display: none;}
+
+/* 관리자 로그인 기능 */
+.wbg.logfunc .lg-cl.bk{
+    color: #000;
+}
+.wbg.logfunc input{
+    outline: none;
+}
+
+.logfunc ul{ padding-top: 120px; margin:auto; width: 240px;}
+.logfunc ul:last-child li:last-child button{
+    background-color:#444444;
+}
+
+
+.change{ display: none;}
+
+.change li .redWarn{
+    color: rgb(235, 63, 51);
+    font-size: 12px;
+    font-style: italic;
+    width: 100%;
+    text-align: left;
+    margin-top: 7px;
+    display: none;
+}
+
+
+/* personal */
+.personal2{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: left; 
+    background-color: rgba( 0, 0, 0, 0.7);
+    overflow: hidden;
+    z-index: 1000;
+}
+.com p{ font-size: 14px; padding: 10px 20px;
+    
+}
+.com{
+    margin: auto;
+    position: relative;
+    top: 220px;
+    width: 500px;
+    height: 500px;
+     background-color: #fff; 
+    overflow: auto;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+.black{
+    background-color: #444444;
+    position: fixed;
+    width: 500px;
+    height: 50px;
+    z-index: 50;
+    top: 170px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.black h3{ color: #fff; font-weight: 400; padding: 12px 15px; font-size: 18px;
+    
+}
+.ps-cl{
+    position: absolute;
+    top: 15px;
+    right: 5%;
+}
+.ps-cl i{color: #fff; font-size: 20px;}
+
+  
+.p_wbg{
+    width: 100%;
+    height: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: auto;
+
+}
+
+/*팝업창*/
+.Lpop {width:500px; overflow:hidden; display:none;
+    position:absolute; z-index:100; left:50%; top: 450px; 
+    transform: translate( -50%, -50%);
+    font-size:0;}
+.Lpop img {width:100%; object-fit:cover;}
+.popups {width:100%; height:50px; list-style:none;
+    background-color:#f7f7f7; font-size:16px; 
+    display:flex; flex-direction:row; justify-content:space-between;
+    align-items:center; align-content:center;
+    padding: 10px;}
+.popups > li:nth-of-type(1) {width:200px; height:30px; line-height:30px;}
+.popups > li:nth-of-type(1)>label>input {margin-right:3px;} 
+.popup_closebtn {width:80px; height:30px; border-radius: 2px;
+    border:0; background-color:#0451a3; color:white; cursor:pointer; outline: none;}
+
+
+
+
+@media(max-width:1400px){
+    .wrap{
+        width: 100%;
+    }
+   
+    
+    
+}
+@media(max-width:1280px){
+    .com{ height: 400px; top: 150px;}
+    .black{ top: 100px;}
+    .login{ padding: 100px;}
+
+}
+@media (max-width:1050px){
+    .banner{
+        top: 80px;
+    }
+    .tm{
+        margin-top: 80px;
+    }
+    header{
+        height: 80px;
+    }
+    .menu h3{
+        margin: 8px 0 0 25px;
+
+    }
+    #mme {
+        margin-top: 25px;
+        right: 5%;
+    }
+    .menu ul{
+        display: none;
+    }
+    #mme{
+        display: block;
+    }
+    .op {
+        left: 92%;}
+    .alert {
+        left : 92%
+    }
+    .top, .bottom{
+        left: 92%;
+    }
+    
+    #logo{
+        display: none;
+    }
+    #slogo{
+        display: block;
+    }
+    .Lpop {width:400px; top:400px;}
+
+    
+}
+@media (max-width : 768px)  {
+    
+    .tm{
+        margin-top: 80px;
+    }
+    .tmb{display: none;}
+
+    html{
+        width: 100%;
+    }
+    footer h3 {
+        width: 150px;
+        margin-right: 25px;
+        margin-left: 25px;
+    }
+    .mMcl{
+        width: 20px;
+        left: 15%;
+    }
+    .bar div {
+        width: 331px;
+        padding: 20px 0;
+    }
+    .bar div p:first-child {
+        font-size: 17px;
+        text-align: center;
+        display: block;
+        padding-bottom: 10px;
+        margin-right: 0;
+    }
+    .nt{ width: 338px;}
+    .bar div .nt input{
+        height: 30px;
+        line-height: 30px;
+    }
+    .bar div .nt input{
+        width: 74px;
+        font-size: 15px;
+    }
+    .bar div .nt input::placeholder{
+        font-size: 15px;
+    }
+    .bar div p:nth-child(3){
+        width: 100%;
+        padding-top: 10px;
+    }
+    .bar #ris{
+        font-size: 14px;
+        margin-left: 0;
+        padding: 4px 10px;
+        display: block;
+        margin: auto;
+
+    }
+    .per{
+        font-size: 12px;
+        margin-top: 0;
+    }
+    .per input{
+        position: relative;
+        top: 1px;
+    }
+    .per .personal2{
+        font-size: 10px;
+        padding: 0 4px;
+    }
+    .cl{
+        top: 8%;
+        font-size: 18px;
+    }
+    .op {
+        font-size: 18px;
+        left: 90%;}
+    .alert {
+        font-size: 20px;
+        left: 90%;}
+    .top, .bottom{
+        left: 90%;
+    }
+    .bannder{
+        top: 80px;
+    }
+    .com p{ font-size: 14px; }
+    .com{width: 480px; height: 400px; top: 180px;}
+    .black{width: 480px; top: 130px;}
+    .black h3{font-size: 16px;}
+    .ps-cl i{ font-size: 22px;}
+    .p_wbg{ top: 250px;}
+    .Lpop {width:350px; top:350px;}
+    .popups { font-size: 15px; height: 46px;}
+    .popup_closebtn { 
+        width: 50px; height: 30px;
+    }
+    
+
+}
+
+@media (max-width : 550px){
+    /* .banner{ top: 70px;}
+    .tm{
+        margin-top: 70px;
+    } */
+    header .menu .main{ display: none;}
+    .menu h3{
+        margin: 9px 0 0 15px;
+
+    }
+    #mme {
+        margin-top: 28px;
+        right: 5%;
+    }
+    #mme i{
+        font-size: 25px;
+    }
+    .tmb ul li a{
+        font-size: 18px;
+    }
+    footer .f_menu{
+        height: 0;
+    }
+    .f_menu h3{
+        display: none;
+    }
+    footer{ height: 160px; padding: 30px;}
+    footer ul{
+        margin: auto;
+        width: auto;
+        font-size: 12px;
+    }
+    .login{ padding: 110px 0;}
+    .wbg{
+        width: 300px;
+        height: 400px;
+    }
+    .wbg h3{
+        padding-top: 60px;
+    }
+    .wbg .lg-cl{
+        left: 120px;
+    }
+
+    .op {
+        font-size: 14px;
+        bottom: 116px;
+        left: 84%;}
+    .alert {
+        font-size: 18px;
+        padding: 9px 14px;
+        bottom: 60px;
+        left: 84%;}
+    .top{
+        left: 84%;
+        padding: 3.5px 12px;
+    }
+    .top img{
+        width: 19px;
+        top : -5px;
+    }
+    .top{
+        bottom: 65px;
+    }
+    
+
+
+    .com p{ font-size: 12px; padding: 10px 10px}
+    .com{width: 320px; height: 300px; top: 150px;}
+    .black{width: 320px; top: 100px; }
+    .black h3{font-size: 14px; padding-top: 16px; padding-left: 10px;}
+    .ps-cl i{ font-size: 20px;}
+    .logfunc ul{ padding-top: 85px;}
+
+    .Lpop {width:250px; top:250px;}
+    .popups { font-size: 13px; height: 40px;}
+    .popup_closebtn { 
+        width: 45px; height: 25px;
+        font-size: 12px;
+    }
+    
+    
+}
+
+
+

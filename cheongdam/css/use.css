@@ -1,0 +1,310 @@
+/* bg */
+
+.bg{
+    top: 100px;
+    width: 100%;
+    height: 400px;
+    background-image: url(../img/use/use.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.bg {
+    text-align: center;
+    padding-top: 165px;
+    font-size:35px;
+    font-weight: 400;
+    color: #fff;
+    font-style: oblique;
+}
+
+.bg p{
+    font-size: 22px;
+    font-style: initial;
+    font-weight: 300;
+}
+.bg p, .bg h3{
+    position: relative;
+    z-index: 2;
+}
+
+.bg::after{
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+}
+
+/* box 1 */
+.box h3{
+    text-align: center;
+    font-size:55px;
+    font-weight: 600;
+    padding-top: 100px;
+    color: #355A92;
+    margin-bottom: 50px;
+}
+
+/* swiper  */
+.ubanner {
+    width: 100%;
+    height: 650px;
+    margin-bottom: 100px;
+}
+.swiper-container{
+    width: 100%;
+      height: 100%;
+}
+
+:root {
+    --swiper-theme-color: #fff;
+}
+
+.swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 15px 5px;
+    display: block;
+}
+
+
+.co{
+    width: 100%;
+    height: 650px;
+    background-color: #355A92;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.co.gren{
+    background-color: #0D8445;
+
+} 
+
+.co > .uicon img{
+    width: 105%;
+    padding-left: 100px;
+}
+
+
+.co > .utext{
+    color: #fff;
+    padding: 0 90px;
+}
+
+.utext h4 {
+    font-size: 55px;
+    background-color: #3a3a3a;
+    padding: 5px 16px;
+    width: fit-content;
+    border-radius: 5px;
+
+}
+
+.utext p {
+    font-size: 40px;
+    padding-top: 40px;
+}
+
+.utext .sm{
+    font-weight: 300;
+    font-size: 18px;
+    padding-top: 20px;
+    padding-left: 5px;
+    letter-spacing: 1px;
+}
+
+/* box2 */
+
+/* table */
+.launc{ margin-bottom: 100px;}
+
+.launc table { margin : auto;}
+.washt {
+    width: 100%;
+    border-spacing: 0;
+}
+
+.washt thead td {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #355A92;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    font-weight: 400;
+}
+
+
+
+.washt tbody td:nth-child(odd) {
+    font-size: 14px;
+    text-align: center;
+    background-color: #f2f8fa;
+}
+
+.washt tbody td {
+    font-size: 16px;
+    text-align: center;
+    color: #444444;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+.washt td {
+    vertical-align: middle;
+    padding: 17px 30px;
+}
+
+.washt tbody td span {
+    font-weight: 500;
+    color: #355A92;
+    font-size: 17px;
+    display: block;
+    line-height: 1.4;
+}
+
+.washt td:nth-child(4n) {
+    border-right: 0;
+}
+
+.washt tbody td span.td_explain {
+    color: #666;
+    font-weight: 500;
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+/* 애견용품 */
+/* .backani{ background-color: #fff5ff;} */
+.petcon {display: grid; grid-template-columns: 1fr 1fr; justify-content: center; align-items: center; row-gap: 50px; margin-top: 75px;  } 
+.pet_text{padding: 50px;}
+.pet_text h4{ display: inline-block; font-size: 35px; margin-bottom: 20px; font-weight: 500; }
+.pet_text .bblu{position: relative; }
+.pet_text p { font-size: 18px; line-height: 35px;}
+.pet_img img{ width: 100%;}
+.petw{ margin: auto; text-align: center; padding: 50px 0;background-color: #d8f2fd; margin: 75px 0; border-radius: 10px;}
+.warn_img{ margin: auto; width : 70%; display: flex;  justify-content: space-around;  align-items: center;  text-align: center; padding: 50px 0 0 0;}
+.img1 p{color: #003c4e; font-weight: 500; font-size: 18px;}
+.warn_text h4{ font-size: 25px; padding-bottom: 20px; color: #003c4e;}
+.warn_text p { font-size: 18px; line-height: 30px; }
+.bblu::before{ content: ""; width: 100%; height: 40%; background-color: #d8f2fd; 
+ position: absolute; z-index: -1; left: 0; top: 40%; border-radius: 2px; }
+ .s_con.pet{
+     background-color: transparent;
+ }
+
+/* 신발 빨래 */
+.s_con { display: grid; grid-template-columns: 1fr 1.5fr; background-color: #b7d1df; padding: 50px 0; margin-bottom: 75px; border-radius: 10px; }
+.s_img img{ width: 90%;}
+.s_img { text-align: center; align-self: center;}
+.s_text { padding: 0 50px; align-self: center; }
+.s_text .s_tb h4{ font-size: 35px; font-weight: 500; margin-bottom: 20px;}
+.s_text p { font-size: 20px;  line-height: 35px ;}
+.s_ld img {max-width: 100%;}
+.s_ldm img{ max-width: 100%;}
+.s_ldm {text-align: center;}
+
+
+/* 신발빨래 표 */
+.s_tb table{ border-collapse: collapse; width: 100%; }
+.s_tb table caption { display: none;}
+.s_tb table td{  width: 25%; padding: 5px; background-color: #fff;}
+.s_tb table tr {border: 1px solid rgb(212, 212, 212); border-left: 0; border-right: 0;}
+.s_tb table th { background-color: #f0f0f0; font-weight: 500; width: 25%;}
+
+@media(max-width : 1280px){
+    .bg{ height: 350px; padding-top: 120px; top: 100px;}
+    .wrap{width: 100%;}
+    .petw{margin: 75px 0 0 0; border-radius: 0;}
+    .s_con{ margin-bottom: 0; border-radius: 0;}
+}
+
+@media(max-width : 1050px){
+    .bg{ top: 80px;}
+    .washt td { font-size: 16px; padding: 15px 20px;}
+    .washt tbody td span {font-size: 16px;}
+    .washt tbody td span.td_explain { font-size: 12px;}
+}
+
+@media(max-width : 768px){
+    .bg{ height: 300px; padding-top: 100px; }
+    .bg h3{ font-size: 30px;}
+    .bg p{ font-size: 18px; padding: 0 30px;}
+    .co{display: block; height: 600px;}
+    .ubanner { text-align: center; height: 600px;}
+    .co > .uicon img{ width: 35%; padding-left: 0; padding-top: 50px;}
+    .utext h4 { font-size: 22px; font-weight: 500; width: 30%; margin: auto; margin-top: 30px;}
+    .utext p{padding: 20px; font-size: 20px;}
+    .co > .utext{padding: 0 50px;}
+    .utext .sm {padding-top: 0; font-size: 16px;}
+    .box h3{ font-size: 40px; }
+    .ltb {transform:  scale(0.9);}
+    .petcon{ grid-template-columns: 1fr; margin-top: 50px;}
+    .pet_text{text-align: center; }
+    .petcon div:nth-child(3) { order: 4;}
+    .petcon div:nth-child(4) { order: 3;}
+    .pet_text h4{font-size: 25px;}
+    .pet_text p{ font-size: 16px; line-height: 35px;}
+    .warn_text h4 { font-size: 20px}
+    .warn_text p { font-size: 16px; padding: 0 20px; line-height: 30px;}
+    .warn_img { width: 85%; padding: 20px 0 0 0;}
+    .s_ld{display: none;}
+    .s_ldm{display: block;}
+    .s_con{ grid-template-columns: 1fr; row-gap: 50px; }
+    .s_img img{ width: 80%;}
+    .s_text{ text-align: center;}
+    .s_text .s_tb h4 { font-size: 25px;}
+    .s_text p { font-size: 18px;  font-weight : 500; padding-left: 0; color: #666666;}
+    .s_tb table tr th { width: 100%; }
+    .s_tb table tr td { width: 100%;}
+    .s_tb table tr { border: 0;}
+    .s_tb table tr, .s_tb table th, .s_tb table td{ display: block;}
+    
+}
+
+@media(max-width : 550px){
+    .bg{ height: 250px; top: 70px; padding-top: 90px;}
+    .bg h3{ font-size: 22px;  font-weight: 500;}
+    .bg p{ font-size: 16px; padding: 0 30px;}
+    .box h3{ font-size: 25px;padding-top: 50px; margin-bottom: 20px; }
+    .co > .uicon img { width: 40%; padding-top: 30px;}
+    .utext h4 { font-size: 16px; width: 40%; padding: 4px 0; margin-top: 10px;}
+    .utext p { font-size: 18px; padding: 10px 0;}
+    .utext .sm { font-size: 14px; padding-left: 0; padding: 10px;} 
+    .co > .utext {padding: 0 25px;}
+    .utext .sm { padding: 0;}
+    .co{height: 450px;}
+    .ubanner {height: 450px; margin-bottom: 50px;}
+    .swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet{
+        margin: 10px 0;
+    }
+    .washt thead td, .washt tbody td, .washt tbody td span{ font-size: 12px; padding: 5px 0; } 
+    .washt tbody td span.td_explain {font-size: 10px;}
+    .petcon{row-gap: 25px;}
+    .pet_text{padding: 40px 20px;}
+    .pet_text h4{font-size: 22px;}
+    .pet_text p{ font-size: 14px; line-height: 25px;}
+    .warn_img { width: 90%; padding: 25px 0 0 0;}
+    .img1{ width: 33.33%;}
+    .img1 img {width: 100%;}
+    .img1 p { display: none;}
+    .petw{ padding: 25px 0 25px 0; margin: 25px 0 0 0;}
+    .warn_text h4 { font-size: 20px}
+    .warn_text p { font-size: 14px; padding: 0 20px; line-height: 25px;}
+    .s_text .s_tb h4 { font-size: 20px;}
+    .s_text p { font-size: 14px; line-height: 20px; padding-left: 0;}
+    .s_tb table { font-size: 14px;}
+}
+
+@media(max-width : 400px){
+    .co > .uicon img {  padding-top: 20px;}
+    .co{height: 400px;}
+    .ubanner {height: 400px; }
+}
+
+

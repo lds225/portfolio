@@ -1,0 +1,484 @@
+
+/* --------------------------service------------------ */
+
+
+.service_container{
+    height: 100vh;
+}
+.service_main,.service_tab,.service_tab li{
+    height: 100vh;
+}
+.service_tab{
+    display: flex;
+    flex-wrap: wrap;
+}
+.service_tab li{
+    width: 50%;
+    height: 50%;
+    position: relative;
+    transition: 0.5s ease-in-out;
+    
+}
+ .service_tab li a::after{
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,rgba(124,209,240,0.5),rgba(321,160,255,0.9));
+    /* background: linear-gradient(to bottom,rgba(0,176,155,0.5),rgba(150,201,61,0.9)); */
+    z-index: 1;
+    transition: 0.5s all;
+    opacity: 0;
+} 
+
+.service_tab li a:hover::after{
+    opacity: 1;
+}
+
+.service_tab .li1{
+    background:linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(../img/service_ad.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+.service_tab .li2{
+    background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ),url(../img/service_v1.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+.service_tab .li3{
+    background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ),url(../img/service_d.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+.service_tab .li4{
+    background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ),url(../img/service_w.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+.service_tab li a{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.service_tab li a::before{
+    display: inline-block;
+    content: '';
+    width: 0;
+    height: 100%;
+    vertical-align: middle;
+}
+.service_tab li a span{
+    font-size: 2rem;
+    color: #fff;
+    padding-top: 60px;
+    letter-spacing: -0.01em;
+    position: relative;
+    z-index: 2;
+}
+
+.service_tab .li1 span:last-child{
+    background: url(../img/ad.svg) no-repeat 50% 0;
+    position: absolute;
+    left: 0;bottom: 50%;
+    width: 100%;  
+} 
+.service_tab .li2 span:last-child{
+    background: url(../img/video.svg) no-repeat 50% 0;
+    position: absolute;
+    left: 0;bottom: 50%;
+    width: 100%;  
+} 
+.service_tab .li3 span:last-child{
+    background: url(../img/design.svg) no-repeat 50% 0;
+    position: absolute;
+    left: 0;bottom: 50%;
+    width: 100%;  
+} 
+.service_tab .li4 span:last-child{
+    background: url(../img/web.svg) no-repeat 50% 0;
+    position: absolute;
+    left: 0;bottom: 50%;
+    width: 100%;  
+} 
+
+
+
+/*--------------------- 광고마케팅 ---------------------*/
+#ad_container{
+    /* background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(../img/bg-masthead.jpg) no-repeat 50% 50%; 
+    background-size: cover; */
+    background-color: rgb(242, 242, 251);
+}
+#video_container{
+    background-color:#f9e4d1;
+}
+#design_container{
+    background-color:#f3f3f3;
+}
+#web_container{
+    background-color:#fff8d9;
+}
+/* #ad_container::before{
+    width: 100%;
+    height: 100%;
+    content: '';
+    position: absolute;
+    top: 0; left:0; 
+    backdrop-filter: blur(8px);
+    background: rgba(242, 242, 251, 0.4);
+
+} */
+.service_main{
+    text-align: center;
+}
+.service_main .title{
+    font-size: 2rem;
+    display: inline-block;
+    padding-top: 90px;
+    color: rgb(35, 35, 35);
+    letter-spacing: 2px;
+}
+.service_main .title::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: rgba(36, 36, 36, 0.7);
+
+}
+.team_service{
+    padding: 50px 80px;
+    display: flex;
+}
+.team_service > div{
+    width: 50%;
+}
+.team_ad,.team_v,.team_d{
+    padding: 30px 80px 30px 30px;
+    position: relative;
+}
+.sub_tit{
+    margin-bottom: 30px;
+    font-size: 2.3rem;
+    font-weight: 500;
+}
+.contents{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.contents > p{
+    font-size: 1.13rem;
+    line-height: 30px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+.sub_p p{
+    margin-bottom: 10px;
+    padding-left: 20px;
+    font-size: 16px;
+    text-align: left;
+}
+
+.adclick{
+    position: absolute;
+    bottom: 6px;left: 30px;
+    border: 1px solid #2ab2cc;
+    padding: 0.6rem 1.3rem;
+    background:transparent;
+    transition:all 0.5s;
+    box-shadow:0px 2px 0px #2ab2cc;
+    border-radius: 4px;
+}
+.adclick ::before{
+    content: '';
+    position: absolute;
+}
+.adclick button{
+    font-size: 20px;
+    letter-spacing:1px;
+    transition: 0.2s ease-in-out;
+    position: relative;
+}
+
+
+.adclick button::before{
+    content: url("../img/down.svg");
+    font-size: 60px;
+    transform: scaleX(-1);
+    right: 23px;
+    top: -68px;
+    animation: up-down 1s infinite;
+    width: 35px;
+}
+@keyframes up-down {
+    50% {
+      margin-top: -20px;
+    }
+  }
+
+.adclick2{
+    position: absolute;
+    bottom:  30px;left: 30px;
+    border: 1px solid #f7b3ae;
+    padding: 0.6rem 1.3rem;
+    background:transparent;
+    transition:all 0.5s;
+    box-shadow:0px 2px 0px #f7b3ae;
+    border-radius: 4px;
+}
+.adclick2 ::before{
+    content: '';
+    position: absolute;
+}
+.adclick2 button{
+    font-size: 20px;
+    letter-spacing:1px;
+    transition: 0.2s ease-in-out;
+    position: relative;
+}
+
+
+.adclick2 button::before{
+    content: url("../img/down2.svg");
+    font-size: 60px;
+    transform: scaleX(-1);
+    right: 23px;
+    top: -68px;
+    animation: up-down2 1s infinite;
+    width: 35px;
+}
+@keyframes up-down2 {
+    50% {
+      margin-top: -20px;
+    }
+  }
+  .adclick3{
+    position: absolute;
+    bottom: 30px;left: 30px;
+    border: 1px solid #6cc4d2;
+    padding: 0.6rem 1.3rem;
+    background:transparent;
+    transition:all 0.5s;
+    box-shadow:0px 2px 0px #6cc4d2;
+    border-radius: 4px;
+}
+.adclick3 ::before{
+    content: '';
+    position: absolute;
+}
+.adclick3 button{
+    font-size: 20px;
+    letter-spacing:1px;
+    transition: 0.2s ease-in-out;
+    position: relative;
+}
+
+
+.adclick3 button::before{
+    content: url("../img/down3.svg");
+    font-size: 60px;
+    transform: scaleX(-1);
+    right: 23px;
+    top: -68px;
+    animation: up-down3 1s infinite;
+    width: 35px;
+}
+@keyframes up-down3 {
+    50% {
+      margin-top: -20px;
+    }
+  }
+
+  .adclick4{
+    position: absolute;
+    bottom: 6px;left: 30px;
+    border: 1px solid #ff7b29;
+    padding: 0.6rem 1.3rem;
+    background:transparent;
+    transition:all 0.5s;
+    box-shadow:0px 2px 0px #ff7b29;
+    border-radius: 4px;
+}
+.adclick4 ::before{
+    content: '';
+    position: absolute;
+}
+.adclick4 button{
+    font-size: 20px;
+    letter-spacing:1px;
+    transition: 0.2s ease-in-out;
+    position: relative;
+}
+
+
+.adclick4 button::before{
+    content: url("../img/down4.svg");
+    font-size: 60px;
+    transform: scaleX(-1);
+    right: 23px;
+    top: -68px;
+    animation: up-down3 1s infinite;
+    width: 35px;
+}
+@keyframes up-down4 {
+    50% {
+      margin-top: -20px;
+    }
+  }
+
+@media screen and (max-width: 1340px){
+    .service_main{
+        height: 100%;
+    }
+    .service_tab li a span{
+        font-size: 1.5rem;
+    }
+    .service_tab .li1 span:last-child,.service_tab .li2 span:last-child,.service_tab .li3 span:last-child,.service_tab .li4 span:last-child{
+        background-size: 50px;
+    }
+    .service_tab li a span{
+        padding-top: 50px;
+    }
+    .service_main .title{
+        padding-top: 120px;
+    }
+    .team_service{
+        padding: 100px 80px 150px;
+    }
+    .adimg img{
+        width: 90%;
+    }
+    .contents > p{
+        margin-bottom: 20px;
+        font-size: 1rem;
+    }
+    .sub_p p{
+        font-size: 15px;
+    }
+    .adclick{
+        bottom: -70px;
+    }
+    .adclick,.adclick2,.adclick3,.adclick4{
+        padding: 0.3rem 0.8rem;
+    }
+    .adclick button,.adclick2 button,.adclick3 button,.adclick4 button{
+        font-size: 16px;
+    }
+    .adclick button::before,.adclick2 button::before,.adclick3 button::before,.adclick4 button::before{
+        right: 22px;
+        width: 25px;
+    }
+}
+
+@media (max-width : 1050px) {
+    .parallax-window .bText {
+        background: linear-gradient(45deg, rgba(112, 108, 244, 0.7), 
+        rgba(100, 94, 250, 0.2));
+        padding: 2rem 10px;
+    }
+}
+
+@media screen and (max-width: 980px){
+    .adclick2,.adclick3,.adclick4{
+        bottom: -50px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .service_container{
+        height: 50vh;
+    }
+    .service_tab{
+        height: 50vh;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    .service_tab li{
+        height: 100%;
+    }
+    .service_tab li a span{
+        font-size: 1.2rem;
+        padding-top: 40px;
+    }
+    .service_tab .li1 span:last-child, .service_tab .li2 span:last-child, .service_tab .li3 span:last-child, .service_tab .li4 span:last-child{
+        background-size: 40px;
+    }
+    .team_service{
+        flex-direction: column;
+        padding: 50px 80px 150px;
+    }
+    .adimg img{
+        width: 70%;
+    }
+    .team_service > div{
+        width: 100%;
+    }
+    .team_ad, .team_v, .team_d{
+        padding: 40px;
+    }
+    .contents > p{
+        font-size: 0.9rem;
+    }
+    .sub_p p{
+        font-size: 14px;
+    }
+    .adclick,.adclick2,.adclick3,.adclick4{
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .contents{
+        align-items: center;
+    }
+    .sub_p p{
+        padding-left: 0;
+    }
+    .sub_ad{
+        width: 100%;
+    }
+    
+}
+
+@media screen and (max-width: 416px){
+    .service_tab li a span{
+        font-size: 0.9rem;
+        padding-top: 30px;
+    }
+    .service_tab .li1 span:last-child, .service_tab .li2 span:last-child, .service_tab .li3 span:last-child, .service_tab .li4 span:last-child{
+        background-size: 30px;
+    }
+    .service_main .title{
+        padding-top: 60px;
+        font-size: 1.5rem;
+    }
+    .team_service{
+        padding: 20px 10px;
+    }
+    .team_service > div{
+        overflow: hidden;
+    }
+    .team_ad, .team_v, .team_d{
+        padding: 28px 28px 108px;
+    }
+    .adclick, .adclick2, .adclick3, .adclick4{
+        bottom: 0;
+        padding: 0.2rem 0.6rem;
+    }
+    .adclick button, .adclick2 button, .adclick3 button, .adclick4 button{
+        font-size: 14px;
+    }
+    .adclick button::before, .adclick2 button::before, .adclick3 button::before, .adclick4 button::before{
+        right: 21px;
+        width: 20px;
+    }
+    .contents > p, .sub_p p{
+        font-size: 13px;
+    }
+    .designcont > p{
+        font-size: 0.9rem;
+    }
+}
+
+

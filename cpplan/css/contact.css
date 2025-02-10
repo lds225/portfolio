@@ -1,0 +1,515 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dancing+Script:wght@700&family=Fugaz+One&family=Limelight&family=Nanum+Myeongjo:wght@800&display=swap');
+/* 메뉴 컬러 변경 */
+header h2 img {
+    filter: invert(0.8);
+}
+
+.navBar > li {
+    color: #222222;
+}
+
+.navBar > li > svg {
+    fill: #222222;
+}
+
+.m_Btn > li > svg {
+    fill: #222222;
+}
+
+.btn-menu:before, .btn-menu:after {
+    background: #222222;
+}
+
+.tr_sns > p {
+    color: #222222;
+}
+
+.tr_sub {
+    background-color:rgba(0,0,0,0.4);
+}
+
+.tr_sub > li > a {
+    color: #fff;
+}
+
+/* 컨택트 폼 */
+.sub {
+    display: none;
+}
+
+
+
+.contact {
+    align-content: center;
+    justify-content: center;
+    padding: 155px 0;
+    background: url("../img/contact.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.contact::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255,255,255,0.6);
+
+} 
+
+.contact_in {
+    position: relative;
+    z-index: 1;
+}
+
+.conTit {
+    text-align: center;
+    color: #222222;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 30px;
+}
+
+.conTit h4 {
+    color: #666666;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.conTit h3 {
+    font-size: 45px;
+}
+
+.conForm h3 {
+    font-size: 30px;
+    text-align: center;
+    color: #222222;
+    letter-spacing: 3px;
+}
+
+.contact .red {
+    color: rgb(255, 66, 32);
+    position: relative;
+    top: 3px;
+}
+
+.contact > p {
+    font-size: 16px; 
+    color: #444444;
+    line-height: 22px;
+    font-weight: 300;
+    padding-bottom: 30px;
+}
+
+
+.conBox {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    overflow: hidden;
+    margin: auto;
+}
+
+.conBox > ul {
+    width: 40%;
+    padding: 10px 35px;
+    margin: 20px;
+    background: rgba(255,255,255,0.9);
+    border-radius: 10px;
+    box-shadow: 2px 4px 15px rgba(0,0,0,0.018),4px 8px 30px rgba(0,0,0,0.048);
+}
+
+.conForm {
+    margin: auto;
+    position: relative;
+    padding: 60px 80px;
+    z-index: 2;
+}
+
+.conBox > ul:hover {
+    box-shadow: 2px 4px 15px rgba(0,0,0,0.038),4px 8px 30px rgba(0,0,0,0.08);
+    transition: .4s ease-in-out;
+    background: #fff;
+}
+
+.conMap > li:first-child {
+    margin-bottom: 15px;
+}
+
+.conInfo  {
+    font-size: 18px;
+    color: #fff;
+}
+
+.conInfo > li  {
+    margin: 15px 0;
+    background: #5f73d6;
+    opacity: 0.95;
+    padding: 5px 20px;
+    border-radius: 25px;
+    box-shadow: 0px 2px 2px rgba(0,0,0,0.068), 0px 3px 3px rgba(0,0,0,0.038);
+}
+
+
+.conInfo img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.conPic {
+    text-align: center;
+}
+
+.conImg > img {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 2px rgb(0 0 0 / 7%), 0px 3px 3px rgb(0 0 0 / 4%);
+}
+
+/* .formTit {
+    position: absolute;
+    top: -19px;
+    left: -120px;
+} */
+
+.warn {
+    color: #666666;
+    line-height: 20px;
+    margin-bottom: 25px;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.conForm  > li{
+    margin: 15px 0;
+    text-align: center;
+}
+
+
+.conForm  > li.con_chk {
+    text-align: left;
+    margin: 0;
+}
+
+.con_chk {
+    position: relative;
+}
+
+.chk_small {
+    position: relative;
+}
+
+.chk_small input[type="checkbox"] {  /* 실제 체크박스는 화면에서 숨김 */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip:rect(0,0,0,0);
+    border: 0
+  }
+
+.con_chk label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    -ms-user-select: none; 
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #666;
+}
+
+.con_chk input[type="checkbox"] + label:before {  /* 가짜 체크박스 */
+    content: ' ';
+    display: inline-block;
+    width: 11px;  /* 체크박스의 너비를 지정 */
+    height: 11px;  /* 체크박스의 높이를 지정 */
+    line-height: 10px; /* 세로정렬을 위해 높이값과 일치 */
+    margin: -2px 8px 0 0;
+    text-align: center; 
+    vertical-align: middle;
+    background: #fafafa;
+    border: 1px solid #cacece;
+    border-radius : 3px;
+    /* box-shadow: 0px 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05); */
+  }
+
+  .con_chk input[type="checkbox"] + label:active:before,
+.con_chk input[type="checkbox"]:checked + label:active:before {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+.con_chk input[type="checkbox"]:checked + label:before {  /* 체크박스를 체크했을때 */ 
+  content: '\2714';  /* 체크표시 유니코드 사용 */
+  color: #99a1a7;
+  /* text-shadow: 1px 1px #fff; */
+  background: #e9ecee;
+  border-color: #adb8c0;
+  box-shadow: 0px 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+  font-size: 10px;
+}
+
+
+
+.con_chk input[type="checkbox"] + label:before {
+  width: 12px;
+  height: 12px;
+  line-height: 10px;
+  font-size: 9px;
+}
+
+.con_chk p {
+    font-size: 11px;
+    color: #999;
+    line-height: 14px;
+    font-weight: 300;
+}
+
+.con_sub {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 20px 1fr;
+    grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 20px;
+       -moz-column-gap: 20px;
+    column-gap:20px;
+}
+
+.con_sub > :nth-child(1) {
+    -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  margin-bottom: 10px;
+}
+
+.con_sub > :nth-child(2) {
+    -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  margin-bottom: 10px;
+}
+
+.con_sub > :nth-child(3) {
+    -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}
+
+.con_sub > :nth-child(4) {
+    -ms-grid-row: 3;
+  -ms-grid-column: 3;
+}
+
+input, textarea, select {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px 5px 5px 10px;
+}
+
+select {
+    width: 100%;
+    outline: none;
+    
+}
+
+.con_sub > li > input {
+    width: 100%;
+    height: 40px;
+}
+
+input::placeholder, textarea::placeholder, select {
+    color: #777777;
+    font-size: 15px;
+}
+
+.conBtn {
+    font-size: 18px;
+    color: #fff;
+    background-color: #5f73d6;
+    border-radius: 4px;
+    padding: 7px 40px;
+    transition: .2s ease;
+    box-shadow: 0px 2px 2px rgba(0,0,0,0.068), 0px 3px 3px rgba(0,0,0,0.038);
+}
+
+.conBtn:hover {
+    background-color: #5766b1;
+}
+
+/* 상담문의 응답 팝업 */
+.overlay {
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    display: none;
+}
+
+.p_popup {
+    margin: auto;
+    margin-top: 200px;
+    width: 450px;
+    background-color: #fff;
+    border-radius: 5px;
+    position: relative;
+    display: none;
+}
+
+.p_popup a {
+    display: inline-block;
+    color: #1f54a3;
+    text-decoration: underline;
+}
+
+.p_popup > div {
+    padding: 80px 0;
+    text-align: center;
+    color: #444444;
+}
+
+#okBox {
+    display: none;
+}
+#noBox {
+    display: none;
+}
+
+.popclBtn {
+    position: absolute;   
+    top: 25px;
+    right: 25px;
+}
+
+.popclBtn:hover svg {
+    fill: #174c9b;
+    transition: .2s ease;
+}
+
+/* 반응형 */
+@media (max-width: 1600px){
+    .conBox {
+        width: 90%;
+    }
+    .conBox > ul{
+        width: 50%;
+    }
+    .conInfo {
+        font-size: 16px;
+    }
+}
+
+@media (max-width : 1050px) {
+    header.down h2 img {
+        filter: none;
+    }
+    .contact {
+        padding: 100px 80px;
+    }
+    .conBox {
+        display: block;
+        padding: 0;
+    }
+    .conBox > ul {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 25px;
+    }
+    .conForm {
+        width: 100%;
+    }
+    .formTit {
+        position: initial;
+    }
+    
+}
+
+@media (max-width : 768px) {
+    .contact {
+        padding: 100px 50px;
+    }
+    .overlay {
+        padding: 0 30px;
+    }
+    .popup {
+        width: 100%;
+    }
+    .conForm {
+        padding: 25px 30px;
+    }
+    .conForm h3 {
+        font-size: 25px;
+    }
+    .contact > p {
+        padding-bottom: 5px;
+        font-size: 15px;
+    }
+    
+}
+
+@media (max-width : 550px) {
+    .conBox {
+        width: 100%;
+    }
+    .contact {
+        padding: 100px 0 0 0;
+    }
+    .conInfo {
+        font-size: 12px;
+    }
+    .conInfo img {
+        width: 20px;
+        height: 20px;
+    }
+    .conBox > ul{
+        border-radius: 0;
+        margin-bottom: 0;
+        margin-bottom: 25px;
+    }
+    .con_sub {
+        grid-template-columns: 1fr;
+        -ms-grid-columns: 1fr;
+    }
+    .con_sub > :nth-child(1) {
+        -ms-grid-row: 1;
+      -ms-grid-column: 1;
+      margin-bottom: 10px;
+    }
+    
+    .con_sub > :nth-child(2) {
+        -ms-grid-row: 2;
+      -ms-grid-column: 1;
+      margin-bottom: 10px;
+    }
+    
+    .con_sub > :nth-child(3) {
+        -ms-grid-row: 3;
+      -ms-grid-column: 1;
+    }
+    
+    .con_sub > :nth-child(4) {
+        -ms-grid-row: 4;
+      -ms-grid-column: 1;
+    }
+    .conForm > li.formTit {
+        margin-bottom: 0;
+    }
+    .conForm > li.con_chk {
+        margin-top: 0;
+    }
+    .con_sub > :nth-child(3) {
+      margin-bottom: 10px;
+    }
+}
+

@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700&display=swap');
+
+/* partners 컨텐츠 */
+.sub {
+    display: none;
+}
+
+.partCon {
+    padding: 160px 100px;
+}
+
+.ourPart {
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+
+.ourPart h3 {
+    font-size: 35px;
+    font-family: "Merriweather Sans", "Noto Sans KR", sans-serif;
+    flex: 2;
+}
+
+
+/* 로고들 */
+.partCon {
+    overflow: hidden;
+}
+
+.partList {
+    flex: 5.5;
+    overflow: auto;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.partList > li {
+    float: left;
+    width: 20%;
+    padding-bottom: 11%;
+    height: 50px;
+    margin-right: 5%;
+    text-align: center;
+}
+
+.partList > li > img {
+    width: 70%;
+}
+
+.partList > li > img.lgsm {
+    width: 60%;
+}
+
+.partList > li > img.lgbTop {
+    width: 70%;
+    position: relative;
+    top: 2px;
+}
+
+.partList > li > img.lgsm.imgTop {
+    position: relative;
+    top: 8px;
+}
+
+.ourPart.part2 {
+    margin-top: 60px;
+}
+
+/* .partList > li > img {
+    filter: invert(0.5);
+    vertical-align: sub;
+}
+
+.partList > li > img:hover {
+    filter: invert(0);
+    transition: .2s ease-in-out;
+}
+
+.partList > li > img.tg:hover  {
+    filter: invert(1);
+    transition: .2s ease-in-out;
+} */
+
+/* 반응형 */
+@media (max-width : 1050px) {
+    .parallax-window .bText {
+        background: linear-gradient(45deg, rgba(84, 96, 239, 0.7), 
+            rgba(100, 94, 250, 0.2));
+        padding: 2rem 10px;
+    }
+
+    .ourPart {
+        display: block;
+        width: 100%;
+    }
+
+    .ourPart h3 {
+        font-size: 30px;
+        margin-bottom: 50px;
+    }
+
+    .partList > li {
+        width: 33.33%;
+        margin-right: 0;
+        padding-bottom: 15%;
+    }
+
+    .partCon {
+        padding: 100px 50px;
+    }
+
+    .ourPart.part2 {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width : 768px) {
+    .ourPart h3 {
+        margin-bottom: 30px;
+    }
+    .partCon {
+        padding: 50px 30px;
+    }
+    .partList > li {
+        width: 50%;
+        padding-bottom: 20%;
+    }
+    .ourPart.part2 {
+        margin-top: 20px;
+    }
+
+} 

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <title>Avecque - 아베크청담</title>
+
+    <!-- 플러그인 -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js" integrity="sha512-CPA5LMoJI/a5HkSIAKcBtFXe4gqGjPUL2ExF/3PmhrrHI17wod9xOqqF+0WZQRKIIq0KwF8oG5BaiWobtrke3A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/main.css">
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper/swiper-bundle.min.css"
+  />
+
+    <!-- js -->
+    <script defer src="js/main.js"></script>
+    <script defer src="js/ani.js"></script>
+</head>
+<body>
+    <!-- 헤더 -->
+    <header>
+        <div class="menu">
+
+            <div class="pcMenu wrap">
+                <!-- 로고 -->
+                <div class="logo">
+                    <a href="main.html">
+                        Avecque
+                    </a>
+                </div>
+                
+                <!-- 메뉴 -->
+                <ul class="mainTap">
+                    <li>
+                        <a href="#">BRAND</a>
+                    </li>
+
+                    <li>
+                        <a href="#">MENU</a>
+                    </li>
+
+                    <li>
+                        <a href="#">CONTACT</a>
+                    </li>
+                </ul>
+
+                
+
+            </div>
+        </div>
+
+        <!-- 모바일 메뉴버튼 -->
+        <div class="mBtn wrap">
+            <div class="moveBtn">
+                <div class="m_menuBtn">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 모바일 메뉴 -->
+        <div class="mobilMenu">
+            <ul class="mMain">
+                <li>
+                    <a href="#">Brand</a>
+                </li>
+
+                <li>
+                    <a href="#">Menu</a>
+                </li>
+
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+
+    </header>
+
+    <!-- 문의 & sns icon -->
+    <div class="in_sns">
+
+        <div class="inqueryBtn">
+            <a href="#">
+                <div class="inquery">
+                    <p><ion-icon name="call-outline"></ion-icon></p>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="inquery">
+                    <p>
+                        <ion-icon name="time-outline"></ion-icon>
+                    </p>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="inquery">
+                    <p>
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </p>
+                </div>
+            </a>
+             
+        </div>
+    </div>
+
+    <!-- 메뉴 패딩박스 -->
+    <!-- <div class="paddingBox"></div> -->
+
+    <!-- 메인화면 -->
+    <div class="main">
+        <div class="mainImg"></div>
+        <div class="mainBox">
+
+            <div class="mTxt">
+                <p class="big">
+                    Avecque
+                </p>
+                <p class="big2">
+                    Dining <span class="big3">Cafe & Bar</span>
+                </p>
+               
+    
+                <div class="moreBtn">
+                    <a href="#">VIEW MORE</a>
+                </div>
+            </div>
+
+            <div class="mImg">
+                <img src="img/main/c6.jpg" alt="배경">
+            </div>
+        </div>
+
+        <div class="siBg">
+            <h2 class="parX">ABOUT<br>AVECQUE CEONGDAM </h2>
+
+            <div class="sing wrap">
+                <section>
+                    <div class="card wine">
+                        <div class="cardBg wnBg"></div>
+                        <div class="conTxt wTxt">
+                            <img src="img/main/001.jpg" alt="">
+                            <h3>
+                                Dining Bar
+                            </h3>
+                            <p>식사와 함께하는 곁들어지는 와인 & 칵테일</p>
+                        </div>
+                        <div class="conImg">
+                            <img src="img/main/wn3.png" alt="와인">
+                            <img src="img/main/ck1.png" alt="칵테일">
+                        </div>
+                    </div>
+                </section>
+    
+                <section>
+                    <div class="card tea">
+                        <div class="cardBg tBg"></div>
+                        <div class="conTxt tTxt">
+                            <img src="img/main/002.jpg" alt="">
+                            <h3>
+                                Dining Cafe
+                            </h3>
+                            <p>식사 후 여유로운 티타임을 즐길 수 있는 공간</p>
+                        </div>
+                        <div class="conImg">
+                            <img src="img/main/cof.png" alt="와인">
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- 중간 슬라이드 -->
+        <div class="midBan">
+            <div class="slideWrap">
+                <div class="innerCon">
+                    <div class="slideTxt">
+                        <p>A sensuous space containing<br>
+                            the salon culture of 18th century<br>French social and cultural
+                        </p>
+                        <div class="moreBtn">
+                            <a href="#">VIEW MORE</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            
+                            <img src="./img/slide/s1.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/slide/s2.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/slide/s3.jpg" alt="">
+                        </div>
+                    
+                    </div>
+              </div>
+            </div>
+        </div>
+
+        <!-- 메뉴 그리드 -->
+        <div class="picBg">
+            <h4>Our Signature</h4>
+
+            <div class="pic wrap">
+                <div class="set">
+                    <img src="img/foodlay/fl1.jpg" alt="">
+                </div>
+                <div class="set">
+                    <img src="img/foodlay/fl2.jpg" alt="">
+                </div>
+                <div class="set">
+                    <img src="img/foodlay/fl3.jpg" alt="">
+                </div>
+                <div class="set">
+                    <img src="img/foodlay/fl4.jpg" alt="">
+                </div>
+                <div class="set">
+                    <img src="img/foodlay/fl5.jpg" alt="">
+                </div>
+                <div class="set">
+                    <img src="img/foodlay/fl6.jpg" alt="">
+                </div>
+            </div>
+
+        </div>
+        
+        
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        effect: 'fade',
+        speed: 900
+      });
+    </script>
+    
+</body>
+</html>

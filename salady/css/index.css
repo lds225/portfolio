@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {font-family: "Noto Sans KR", "맑은 고딕", "돋움";}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333333;
+}
+
+.hide {
+    display: none;
+}
+
+#wrap {
+    width: 1280px;
+    margin: auto;
+    height: 100%;
+	overflow: auto;
+}
+
+header {
+    height: 130px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+   
+}
+
+header h1 {
+    float: left;
+    margin-top: 32px;
+    margin-left: 20px;
+	width: 200px; height: 99px;
+}
+
+header h1 a{display: block; width: 100%;
+	
+}
+
+header nav {
+    float: right;
+    margin-right: 130px;
+}
+
+header .main > li {
+    float: left;
+    width: 145px;
+    position: relative;
+    text-align: center;
+    margin-top: 60px;
+}
+
+header .main > li > a {
+    padding: 18px;
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+header .main > li:hover > a {
+    color:#0abf0d;
+}
+
+header .sub {
+    z-index: 1000;
+    position: absolute;
+    left: 0;
+    top: 88px;
+    width: 100%;
+   
+    display: none;
+}
+
+header .sub > li > a {
+    padding: 12px;
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+header .sub > li:hover > a {
+    color: #086e09;
+    text-decoration: underline;
+	font-weight: 500;
+}
+
+header .topBg {
+	z-index: 80;
+    background-color: #fff;
+    width: 100%;
+    height: 210px;
+    position: absolute;
+    left: 0;
+    top: 130px;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 350px;
+}
+
+
+
+.item {
+    padding-top: 80px;
+	width: 1280px; 
+	margin: auto;
+}
+
+.item  h3 {
+    text-align: center; font-size: 25px; 
+}
+
+.item section {
+	padding-bottom: 100px;
+}
+
+section article {
+    width: 100%;
+    margin-top: 25px;
+}
+
+article ul {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.item ul {margin: auto;
+  width: 1200px;
+	background-image: url(../img/bg2.png);
+}
+/*article ul li {width: 250px;}
+
+article ul li>a {display: block; width: 100%;}
+article ul li:hover>a {}*/
+
+article ul li a img {
+    width: 250px;
+}
+
+article ul li p {
+    text-align: center;
+    padding: 10px; background-color: #34a838; color: #fff; border-radius: 20px;
+    font-size: 20px; font-weight: 600; width:200px; margin: auto;
+}
+
+#bg{ width: 1280px; height: 210px; background-color: #ff8f26; padding-top: 18px; margin: auto; color: #fff;}
+
+footer {  width: 1280px; margin: auto; background-color: #3b4a48; color: darkgray; font-size: 14px;
+     height: 100px; padding: 50px 0;
+	line-height: 2em;
+}
+
+footer .bottomMenu {}
+
+footer ul {display: block;overflow: auto; width: 800px;padding-left: 50px; }
+footer li { float: left; padding-right: 15px; }
+
+footer p {padding-left: 50px;}
+/*.art1 {float: left;}
+.art1 ul{float: left;}*/
+.art1 {position: relative;margin-left: 20px;  }
+.art1 h3 ,.art2 h3{margin-bottom: 10px;}
+.art1, .art2 {height: 200px; float:left;}
+.art1{width: 350px; margin-right: 20px;}
+.art1 ul{display: block;  }
+.art1 ul>li{ }
+.art1 ul li a{margin-right: 15px; display: inline-block; width: 265px; color: #fff;}
+
+.art1 ul li:hover>a{font-weight: 500; color: darkslategray;}
+.art1 ul li>span{font-size: 12px; color: #ededed; }
+.art1 ul li:last-child>a{float: right; font-size: 12px; color: #ededed;}
+.art1 li:last-child>a{position: absolute;top: 12px; left: 306px; }
+
+.art2 {position: relative; overflow: hidden;}
+.art2 p{display: inline-block; margin-right: 15px;}
+.art2 p:last-child>a{font-size: 12px; color: #ededed; position: absolute; top: 12px; left: 452px; }
+
+.art2 a:hover{font-weight: 500; color: darkslategray;}
+
+.art3{display: inline-block;}
+
+.if {text-align: center;}
+
+.if h3{  font-size: 20px; background-color: #d46a00; color: #fae04b; width: 300px; margin: auto; padding: 5px 0;}
+iframe{margin: auto; margin: 50px 0;
+	width: 800px; height: 500px;
+}
+
+
+

@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>청담빨래터</title>
+
+    <!-- plug-in -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+
+    <!-- style -->
+    <link rel="stylesheet" href="css/fix.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/aos.css">
+    
+    <!-- favicon -->
+    <link rel="shortcut icon" href="img/fa2.png" type="image/x-icon">
+    <link rel="icon" href="img/fa2.png" type="image/x-icon">
+
+    <!--팝업창 스크립트-->
+    <script>
+    function p_close(){
+     var pop_ckbox = document.getElementById("popup_ckbox").checked;
+     if(pop_ckbox==true){
+      setcookie("event","true",1);
+     }
+     $("#Lpop").fadeOut();
+    }
+
+    function setcookie(key,use,day){
+     var today = new Date();
+     today.setDate(today.getDate() + day);//개인 pc 날짜 및 시간을 가져옴
+     document.cookie = key + "=" + escape(use) + "; path=/; expires=" + today.toGMTString() + ";";
+    }
+
+    function getcookie(key){
+     var getck = "";
+     var cookie = document.cookie.split(";");
+     cookie.some(function(item){
+      item = item.replace(" ","");
+      var s = item.split("=");
+      if(key==s[0]){
+        getck = s[1];
+       return true;
+      }
+     });
+     return getck;
+    }
+    </script>
+
+</head>
+<body oncontextmenu="return false">
+    <!--팝업창 구현-->
+    <div class="Lpop" id="Lpop">
+        <a href="pro.html"><img src="./img/Lpop.jpg" alt="이번달 프로모션"></a>
+        <ol class="popups">
+            <li>
+              <label for="popup_ckbox">
+               <input type="checkbox" id="popup_ckbox">오늘 창 그만보기
+              </label>
+            </li>  
+            <li>
+              <button type="button" class="popup_closebtn" id="popup_closebtn" onclick="p_close();">닫기
+            </button>
+            </li>  
+        </ol>
+    </div>
+    <!-- navigator -->
+    <header id="main-header">
+        <div class="wrap">
+            <div class="menu">
+                <h3 class="logo">
+                    <a href="index.html">
+                        <img src="img/logo-shrink3.png" alt="청담빨래터" id="slogo">
+                        <img src="img/logo4.png" alt="청담빨래터" id="logo">
+                    </a>
+                </h3>
+                <button id="mme">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="main">
+                    <li>
+                        <a href="story.html">청담 빨래터</a>
+                        <ul class="sub">
+                            <li>
+                                <a href="story.html">브랜드 스토리</a>
+                            </li>
+                            <li>
+                                <a href="guide.html">오시는 길</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="laun.html">장비 소개</a>
+                        <ul class="sub">
+                            <li>
+                                <a href="laun.html">세탁기</a>
+                            </li>
+                            <li>
+                                <a href="dry.html">건조기</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="use.html">이용 안내</a>
+                        <ul class="sub">
+                            <li>
+                                <a href="use.html">매장 이용방법</a>
+                            </li>
+                            <li>
+                                <a href="cos.html">세탁 코스</a>
+                            </li>
+                            <li>
+                                <a href="pet.html">애견용품 빨래</a>
+                            </li>
+                            <li>
+                                <a href="shoe.html">신발 빨래</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="pro.html">창업 안내</a>
+                        <ul class="sub">
+                            <li>
+                                <a href="pro.html">프로모션</a>
+                            </li>
+                            <li>
+                                <a href="step.html">창업절차</a>
+                            </li>
+                            <li>
+                                <a href="faq.html">자주묻는질문</a>
+                            </li>
+                            <li>
+                                <a href="que.html">창업문의</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="store.html">매장 찾기</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+    </header>
+    
+    <!-- mobile menu -->
+   <button class="mMcl"><img src="img/index/mcl.svg" alt="닫기"></button>
+   <div class="moMenu">
+       <div class="bgwt">
+           <p><img src="img/logo2.png" alt="청담빨래터"></p>
+           <ul class="mMain">
+               <li>
+                   <p>청담 빨래터</p>
+                   <div class="mSub-wrap">
+                   <ul class="mSub">
+                       <li>
+                           <a href="story.html">브랜드 스토리</a>
+                       </li>
+                       <li>
+                           <a href="guide.html">오시는 길</a>
+                       </li>
+                   </ul>
+                   </div>
+               </li>
+               <li>
+                   <p>장비 소개</p>
+                   <div class="mSub-wrap">
+                   <ul class="mSub">
+                       <li>
+                           <a href="laun.html">세탁기</a>
+                       </li>
+                       <li>
+                           <a href="dry.html">건조기</a>
+                       </li>
+                   </ul>
+                   </div>
+               </li>
+               <li>
+                   <p>이용 안내</p>
+                   <div class="mSub-wrap">
+                   <ul class="mSub">
+                       <li>
+                           <a href="use.html">매장 이용방법</a>
+                       </li>
+                       <li>
+                           <a href="cos.html">세탁 코스</a>
+                       </li>
+                       <li>
+                           <a href="pet.html">애견용품 빨래</a>
+                       </li>
+                       <li>
+                           <a href="shoe.html">신발 빨래</a>
+                       </li>
+                   </ul>
+                   </div>
+               </li>
+               <li>
+                   <p>창업 안내</p>
+                   <div class="mSub-wrap">
+                   <ul class="mSub">
+                       <li>
+                           <a href="pro.html">프로모션</a>
+                       </li>
+                       <li>
+                           <a href="step.html">창업절차</a>
+                       </li>
+                       <li>
+                           <a href="faq.html">자주묻는질문</a>
+                       </li>
+                       <li>
+                           <a href="que.html">창업문의</a>
+                       </li>
+                   </ul>
+                </div>
+               </li>
+               <li>
+                   <a href="store.html">매장 찾기</a>
+               </li>
+           </ul>
+       </div>
+   </div>
+    
+
+    <!--banner slide -->
+    <div class="topban">
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide b1">
+                    <div class="wrap">
+                        <div class="slide_text">
+                            <h3>
+                                여러분의<br><span>건강한 삶</span>을<br>응원합니다.
+                            </h3>
+                            <p>청담 빨래터와 튼튼하게!</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide b2">
+                    <div class="wrap">
+                        <div class="slide_text" >
+                            <h3>
+                                <span>정성이 담긴</span><br>마음 따뜻한 빨래
+                            </h3>
+                            <p>
+                                맑은 연못에서 빨래하시던 어머니의 모습에서 기원하여<br>
+                                정성이 가득한 서비스를 제공하려 합니다.<br>
+                            </p>
+                            <a href="story.html" class="btn">브랜드 스토리</a>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        
+        </div>
+    </div>
+
+    
+
+    <!-- service_contents -->
+        <div class="wrap">
+            <div class="serve con">
+                <div class="ser_im scon" data-aos="fade-right">
+                    <div class="imgpo">
+                        <img src="img/index/ser2.jpg" alt="카트">
+                        <img src="img/index/ser1.jpg" alt="세탁기">
+                    </div>
+                </div>
+                <div class="ser_text scon" data-aos="fade-left">
+                    <h2>청담 빨래터만의 SERVICE</h2>
+                    <h3>즐거운 빨래시간을 위한<br>
+                            청담 SERVICE</h3>
+                    <p>청담 빨래터는 여러분의 세탁시간을 간소화하고 옷의 아름다움을<br>유지시키기 위해 노력합니다. </p>
+                    <ul>
+                        <li> <i class="fas fa-tint"></i> 세탁물이 많을 때? 카트사용으로 편리하고 빠르게! </li>
+                        <li> <i class="fas fa-tint"></i> 고급 드럼세탁기 이용으로 내 옷을 안전하게!</li>
+                        <li> <i class="fas fa-tint"></i> 천연 세재로 섬유를 부드럽고 깨끗하게 유지합니다. </li>
+                    </ul>
+                    <a href="use.html">더 알아보기</a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- middle slide -->
+            <div class="swiper-container slide2">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide mb1">
+                            <p><q>손상 걱정 없이<br>안심하고 마음껏 빨래하세요!</q></p>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide mb2">
+                        <p><q>상쾌하고 뽀송뽀송한 일상을 만들어요!</q></p>
+                    </div>
+                </div>
+            </div>
+
+        <!-- bus contents -->
+        <div class="bus con">
+            <div class="wrap">
+                <h2 data-aos="fade-down"><span>청담 빨래터</span>를 만나보세요</h2>
+                <div class="flex">
+                    <div class="bus_scon" data-aos="fade-up" data-aos-delay="100">
+                        <a href="cos.html">
+                        <div class="buim">
+                            <img src="img/index/bus2.jpg" alt="프로모션">
+                        </div>
+                        <div class="butext">
+                            <p>청담 세탁코스<br><span class="sm">여러가지 소재를<br> 한번에!</span></p>
+                        </div>
+                        </a>
+                    </div>
+
+                    <div class="bus_scon" data-aos="fade-up" data-aos-delay="200">
+                        <a href="pet.html">
+                        <div class="butext">
+                            <p>애견용품 빨래<br><span class="sm">반려동물을 위한<br>특별한 세탁</span></p>
+                        </div>
+                        <div class="buim">
+                            <img src="img/index/bus1.jpg" alt="프로모션">
+                        </div>
+                        </a>
+                    </div>
+
+                    <div class="bus_scon bblue" data-aos="fade-up" data-aos-delay="300">
+                        <a href="laun.html">
+                        <div class="butext">
+                            <p class=" wtt">최고급 브랜드<br><span class="sm">프리머스(PRIMUS)<br>세탁장비!</span><span class="grow">더 알아보기</span></p>
+                            
+                        </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+
+    <!-- counsel bar -->
+    <div class="bar">
+        <form id="L_form" name="L_form">
+            <div>
+                <p>
+                    창업상담
+                </p>
+    
+                <p class="nt">
+                    <input type="text" id="name" name="name" placeholder="이름" spellcheck="false" maxlength="5">
+                    <input type="tel" id="tel1" name="tel1" maxlength="3" placeholder="연락처">
+                    -<input type="tel" id="tel2" name="tel2" maxlength="4" >
+                    -<input type="tel" id="tel3" name="tel3" maxlength="4">
+                </p>
+                <p>
+                <button type="button" id="ris" onclick="consel()">
+                    신청하기
+                </button>
+                </p>
+                <p class="per">
+                    <label for="L_agree">
+                        <input type="checkbox" id="L_agree" name="infochecked">개인정보 수집·이용에 동의합니다.
+                    </label>
+                    
+                    <button class="personal">보기</button>
+                </p>
+                
+            </div>
+            </form>
+        <button class="cl">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    <button class="op">
+        상담
+    </button>
+    <button class="alert">
+        <i class="far fa-bell"></i>
+    </button>
+    <button class = "top">
+        <img src="img/index/top.png" alt="맨 위로">
+    </button>
+    
+
+    <!-- personal -->
+    <div class="personal2">
+        <div class="com">
+        <div class="p_wbg">
+            <div class="black">
+                <button class="ps-cl"><i class="fas fa-times"></i></button>
+                <h3>개인정보 취급방침</h3>
+            </div>
+            <p>
+                <br>
+                <strong>제1조 (개인정보 수집에 대한 동의)</strong><br><br>
+                <strong>[개인정보취급방침]</strong><br>
+                회사는 이용자들이 회사의 개인정보취급방침 또는 이용약관의 내용에 대하여 “동의”버튼 또는 “취소”버튼을 클릭할 수 있는 절차를 마련하여, “동의”버튼을 클릭하면 개인정보 수집에 대해 동의한 것으로 봅니다.<br>
+                <br>
+    
+                <strong>제2조 (개인정보 수집항목)</strong><br>
+                온라인 문의를 통한 상담을 위해 처리하는 개인정보 항목은 아래와 같습니다.<br>
+                수집항목 : 성명, 전화번호<br>
+                <br>
+    
+                <strong>제3조 (개인정보의 이용목적)</strong><br>
+                회사는 이용자의 사전 동의 없이는 이용자의 개인 정보를 공개하지 않으며, 원활한 고객상담, 각종 서비스의 제공을 위해 아래와 같이 개인정보를 수집하고 있습니다. <br>모든 정보는 상기 목적에 필요한 용도 이외로는 사용되지 않으며 수집 정보의 범위나 사용 목적, 용도가 변경될 시에는 반드시 사전 동의를 구할 것입니다.<br>
+                성명 : 제품상담에 따른 본인 확인<br>
+                전화번호 : 제품상담 및 이벤트 관련 고지사항 전달, 새로운 서비스 및 신상품 정보 제공(DM, SMS, 이메일 등 이용)<br>
+                <br>
+                이용자는 개인정보의 수집/이용에 대한 동의를 거부할 수 있습니다. 다만, 동의를 거부하는 경우 온라인 문의를 통한 상담은 불가하며 서비스 이용 및 혜택 제공에 제한을 받을 수 있습니다.<br>
+                <br>
+                <strong>제4조 (개인정보의 보유 및 이용기간)</strong><br>
+                원칙적으로 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다. <br>그리고 상법, 전자상거래 등에서의 소비자보호에 관한 법률 등 관계법렵의 규정에 의하여 보존할 필요가 있는 경우 회사는 관계법령에서 정한 일정한 기간 동안 정보를 보관합니다. <br>이 경우 회사는 보관하는 정보를 그 보관의 목적으로만 이용하며 보존기간은 아래와 같습니다.<br>
+                <br>
+                계약 또는 청약철회 등에 관한 기록 :<br>5년(전자상거래등에서의 소비자보호에 관한 법률)<br>
+                소비자의 불만 또는 분쟁처리에 관한 기록 :<br>3년(전자상거래등에서의 소비자 보호에 관한 법률)<br>
+                시용정보의 수집/처리 및 이용 등에 관한 기록 :<br>3년(신용정보의 이용 및 보호에 관한 법률)<br>
+                <br>
+                회사는 귀중한 이용자의 개인정보를 안전하게 처리하며, 유출의 방지를 위하여 다음과 같은 방법을 통하여 개인정보를 파기합니다.<br><br>
+                종이에 출력된 개인정보는 분쇄기로 분쇄하거나 소각을 통하여 파기합니다.<br>
+                <br>
+                전자적 파일 형태로 저장된 개인정보는 기록을 재생할 수 없는 기술적 방법을 사용하여 삭제합니다.<br><br>
+            </p>
+        </div>
+        </div>
+    </div>
+
+   
+
+    <!-- footer     -->
+    <footer>
+        <div class="wrap">
+            <div class="f_menu">
+                <h3>
+                    <a  class="lg"><img src="img/logo2.png" alt="청담빨래터"></a>
+                </h3>
+                <ul>
+                    <li>본사 : 서울 강남구 학동로 508</li>
+                    <li>사업자등록번호 : 000-00-00000</li>
+                    <li>대표이사 : 한현민</li>
+                    <li>전화 : 1588-8888</li>
+                    <li>COPYRIGHT@Cheongdam-dong Laundry Site. All Rights Reserved.</li>
+                                        
+                </ul>
+            </div>
+            
+        </div>
+
+    </footer>
+
+    <!--admin login -->
+    <div class="login" id="admins">
+        <div class="wbg logg" id="ad_Lo1">
+            <div class="bbg"></div>
+            <button class="lg-cl"><i class="fas fa-times"></i></button>
+            <h3>청담빨래터<br>관리자 로그인</h3>
+                <ul>
+                    <li><input type="text" id="id" name="id" class="enter" placeholder="아이디"></li>
+                    <li><input type="password" id="password" name="passwd" class="enter" placeholder="비밀번호"></li>
+                    <li><button type="button" id="log" onclick="adminLin()">로그인</button></li>
+                </ul>
+        </div>
+        <div class="wbg logfunc" id="ad_Lo2">
+            <button class="lg-cl bk"><i class="fas fa-times"></i></button>
+            <ul>
+                <li><button type="button" id="down">알림 ON</button></li>
+                <li><button type="button" id="excel">데이터 다운로드</button></li>
+                <li><button type="button" id="Logout">로그아웃</button></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <!-- script -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="https://kit.fontawesome.com/735578f5df.js" crossorigin="anonymous"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 200,
+            duration: 700
+        })
+    </script>
+
+    <script>
+         var swiper = new Swiper('.swiper-container', {
+     
+      slidesPerView: 1,
+      spaceBetween: 0,
+      speed: 900,
+      loop: true,
+      loopAdditionalSlides: 2,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      effect: 'fade'
+    });
+    $(".swiper-container").each(function(elem, target){
+    var swp = target.swiper;
+    $(this).hover(function() {
+        swp.autoplay.stop();
+    }, function() {
+        swp.autoplay.start();
+    });
+    });
+      </script>
+    <script>
+        var pop_cookie = getcookie("event"); 
+        if(pop_cookie==""){
+          document.getElementById("Lpop").style.display="block";
+        }
+      </script>
+</body>
+</html>
