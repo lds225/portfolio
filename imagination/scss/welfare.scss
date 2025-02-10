@@ -1,0 +1,131 @@
+@import "header.scss";
+
+// 기업소개
+.brand.orgExp {
+    background-color: #fff;
+}
+
+.orgTit {
+    height: 300px;
+    color: #fff;
+    background-color: #444444;
+    display: flex;
+    position: relative;
+    transition: .2s ease;
+
+    & > .orgImg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        background-image: url(../img/wel/welbg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+}
+
+.orgBan {
+    text-align: center;
+    position: relative;
+    z-index: 1px;
+
+    & > h2 {
+        font-size: 50px;
+        padding-bottom: 20px;
+        opacity: 0;
+        animation: fade .8s ease forwards;
+    }
+
+    & > p {
+        font-size: 20px;
+        opacity: 0;
+        line-height: 30px;
+        animation: fade .8s .3s ease forwards;
+    }
+}
+
+// 복지
+.wel {
+    padding: 60px 0;
+}
+
+.welCon {
+    width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+.welBox {
+    @include wh(100%, null);
+    @include flex(column);
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 2px rgba(91, 189, 255, 0.192),0 0 10px 5px rgba(125, 207, 255, 0.158);
+    padding: 20px;
+    transition: .4s ease;
+}
+
+.welImg {
+    height: 80px;
+    width: 70%;
+    text-align: center;
+    @include flex(null);
+    & > img {
+        width: 90%;
+        height: 100%;
+    }
+}
+
+.welTxt {
+    text-align: center;
+    padding-top: 25px;
+
+    & > p {
+        font-size: 20px;
+        font-weight: 600;
+        color: #444444;
+        padding-bottom: 5px;
+        transition: .4s ease;
+    }
+
+    & > span {
+        font-size: 16px;
+        color: #666666;
+    }
+}
+
+// 애니메이션
+@keyframes fade {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity : 1;
+    }
+}
+
+// 호버
+@media(hover:hover) {
+    .welBox {
+        &:hover {
+            transform: translateY(-15px);
+
+            & > .welTxt > p {
+                color: #54b7ff;
+            }
+        }
+    }
+}
+
+// 반응형
+@include brand;
+@include welfare;
+
+  

@@ -1,0 +1,463 @@
+@import "header.scss";
+
+
+
+//공통
+.bg_wrap{
+    @include wh(85%,null);
+    margin: auto;
+    padding: 4% 8%;
+}
+.C_wrap{
+    h2{
+        font-size: 50px;
+        line-height: 62px;
+        letter-spacing: 3px;
+        font-weight: 900;
+    }
+    h3{
+        font-size: 20px;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        line-height: 30px;
+    }
+    h4{
+        font-size: 20px;
+        margin-top: 10px;
+        line-height: 1.7;
+        font-weight: 400;
+    }
+}
+
+
+
+//메인 시작
+.viral_wrap{ 
+    //바이럴 메인
+    .viralbg{
+        background: url(../image/viral/viralbg2.jpg) no-repeat;
+        background-position: center;
+    }
+    .viralM{
+        text-align: center;
+        color: #fff;
+        .viralH{
+            p{
+                font-size: 20px;
+                line-height: 32px;
+                letter-spacing: 1px;
+            }
+        }
+        .viralI{
+            margin-top: 4%;
+            ul{
+                display: flex;
+                justify-content: center;
+                gap: 6%;
+                li{
+                    img{
+                        @include wh(55px,null);
+                    }
+                    animation: slide_top .5s linear forwards ;
+                    opacity: 0;
+                    &:nth-child(1){
+                        animation-delay: 0.2s;
+                    }
+                    &:nth-child(2){
+                        animation-delay: 0.3s;
+                    }
+                    &:nth-child(3){
+                        animation-delay: 0.4s;
+                    }
+                }
+            }
+        }
+    }
+    @keyframes slide_top{
+        0%{
+            transform: translateY(-150px);
+            opacity: 0;
+        }
+        100%{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    //광고 전략
+    .viralSH_bg{
+        background-color: #e2f2e9;
+        .text_H{
+            text-align: center;
+            h2{
+                padding-bottom: 15px;
+                border-bottom: 1px solid;
+                display: inline-block;
+                color: #333;
+            }
+            h3{
+                font-weight: 500;
+            }
+        }
+        .viralI_T{
+            display: flex;
+            align-items: center;
+            margin-bottom: 3%;
+            gap: 5%;
+            .viralI{
+                padding: 1.5%;
+                background: #84d78e;
+                border-radius: 10px;
+                img{
+                    @include wh(80px,80px);
+                }
+            }
+        }
+        .mark{
+            margin-bottom: 10px;
+            .mark_l{
+                @include wh(150px,1px);
+                background: #19b759;
+                display: inline-block;
+                margin: 0 12px 8px 0;
+                display: none;
+            }
+            p{
+                font-size: 25px;
+                line-height: 25px;
+                color: #19b759;
+                font-weight: 600;
+                display: inline-block
+            }
+            .mark_r{
+                @include wh(150px,1px);
+                background: #19b759;
+                display: inline-block;
+                margin: 0 0 8px 12px;
+            }
+        }
+        .viralS_T{
+            p:first-child{
+                font-size: 20px;
+                line-height: 20px;
+                line-height: 35px;
+                font-weight: 700;
+            }
+            p{
+                font-size: 17px;
+                line-height: 25px;
+            }
+        }
+    }
+    //스케쥴 스텝
+    .market_sch{
+        .sch_H{
+            text-align: center;
+            h2{
+                display: inline-block;
+                padding-bottom: 15px;
+                border-bottom: 1px solid;
+            }
+            h3{
+                font-weight: 500;
+            }
+        }
+        .market_ico{
+            display: flex;
+            flex-direction: column;
+            margin-top: 25px;
+            .icon {
+                margin-bottom: 15px;
+                img{
+                    @include wh(90px,90px);
+                }
+            }
+            .icon_01{
+                margin-bottom: 4%;
+            }
+            .icon_01,.icon_02{
+                @include flex(null);
+                gap: 8%;
+            }
+            .step{
+                text-align: center;
+                p{
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 28px;
+                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                    letter-spacing: 1px;
+                }
+                & p:last-child{
+                    font-size: 18px;
+                    color: #2c3268;
+                    letter-spacing: 0;
+                    font-family: 'Nanum Gothic', sans-serif;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+    //배너 카드
+    .viralAD{
+        background: #e2f2e9;
+        .bg_wrap{
+            @include wh(100%,null);
+            padding: 5% 6%;
+        }
+        .viralAD_card{
+            display: flex;
+            gap: 2%;
+            .card{
+                transition: .4s ease;
+                @include wh(25%,null);
+                text-align: center;
+                background: #fff;
+                box-shadow: rgb(204,204,204) 5px 5px 10px;
+                padding: 15px;
+                h3{
+                    margin-top: 4%;
+                }
+                img{
+                    @include wh(100%,null);
+                }
+                p{
+                    font-size: 17px;
+                    font-weight: 300;
+                    line-height: 1.5;
+                    padding: 10px 0 40px 0;
+                }
+                
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//반응형
+
+@media (max-width: $menu) {
+    .viral_wrap{
+        // h2{
+        //     font-size: 40px;
+        //     line-height: 60px;
+        // }
+        .viralM{
+            .viralH{
+                p{
+                    font-size: 17px;                    
+                    line-height: 28px;
+                }
+            }
+        }
+        .market_sch{
+            .market_ico {
+                .icon{
+                    img{
+                        @include wh(80px,80px);
+                    }
+                }
+            }
+        }
+        .viralAD{
+            .viralAD_card{
+                flex-wrap: wrap;
+                .card{
+                    @include wh(100%,null);
+                    padding: 5%;
+                    margin-bottom: 20px;
+                    .imgI{
+                        img{
+                            width: 400px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $pad) {
+    .viral_wrap{
+        // h2{
+        //     font-size: 5vw;
+        //     line-height: 55px;
+        // }
+        .viralM{
+            .viralH{
+                p{
+                    font-size: 17px;
+                }
+            }
+        }
+        .viralSH_bg{
+            .viralI_T{
+                margin-bottom: 10%;
+                flex-direction: column;
+                .viralI{
+                    padding: 2%;
+                    background: #84d78e;
+                    border-radius: 10px;
+                    img{
+                        @include wh(88px,88px);
+                    }
+                }
+            }
+            .viralT_M{
+                text-align: center;
+                .mark{
+                    margin: 10px 0; 
+                    .mark_l{
+                        @include wh(100px,1px);
+                        display: inline-block;
+                    }
+                    .mark_r{
+                        @include wh(100px,1px);
+                    }
+                }
+            }
+        }
+        .market_sch{
+            .market_ico {
+                .icon_01{
+                    flex-wrap: wrap;
+                    margin-bottom: 0;
+                    .step{
+                        @include wh(40%,null);
+                        margin-bottom: 20px;
+                    }
+                }
+                .icon_02{
+                    flex-wrap: wrap;
+                    .step{
+                        @include wh(40%,null);
+                        margin-bottom: 20px;
+                    }
+                }
+                .step{
+                    p{
+                        font-size: 16px;
+                    }
+                    & p:last-child{
+                        line-height: 21px;
+                        font-size: 15px;
+                    }
+                }
+                .icon{
+                    img{
+                        @include wh(80px,80px);
+                    }
+                }
+            }
+        }
+        .viralAD{
+            .viralAD_card{
+                flex-wrap: wrap;
+                .card{
+                    @include wh(100%,null);
+                    padding: 5%;
+                    margin-bottom: 20px;
+                    .imgI{
+                        img{
+                            width: 400px;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+@media (max-width: $mobile) {
+    .viral_wrap{
+        .viralM{
+            .viralH {
+                p{
+                    // line-height: 22px;
+                    // font-size: 15px;
+                    display: none;
+                }
+            }
+            .viralI{
+                padding-top: 6%;
+                ul{
+                    li{
+                        @include wh(47%,null);
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+        .viralSH_bg{
+            .viralI_T{
+                .viralI{
+                    padding: 4%;
+                    img{
+                        @include wh(75px,75px);
+                    }
+                }
+            }
+            .viralS_T{
+                & p:first-child{
+                    line-height: 30px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        .market_sch{
+            .market_ico {
+                .icon_01,.icon_02{
+                    gap:12%;
+                }
+                .icon{
+                    img{
+                        @include wh(70px,70px);
+                    }
+                }
+            }
+        }
+        .viralAD{
+            .viralAD_card{
+                .card{
+                    .imgI{
+                        img{
+                            @include wh(100%,null);
+                        }
+                        p{
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+
+
+@include bg_wrap;
+
+@media (hover: hover) {
+    .viralAD{
+        .viralAD_card{
+            .card{
+                &:hover{
+                    transform: translateY(-15px);
+                }
+            }
+        }
+    }
+}

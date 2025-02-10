@@ -1,0 +1,1090 @@
+// 반응형 사이즈
+$pc: 1280px;
+$menu: 1050px;
+$pad: 768px;
+$mobile: 556px;
+
+// wrap
+@mixin wrap {
+    @media (max-width: $menu) {
+        .box {
+            padding: 80px 0;
+        }
+    }
+
+    @media (max-width: $pad) {
+        .wrap {
+            width: 90%;
+        }
+
+        .box {
+            padding: 50px 0;
+            }
+    }
+}
+
+//header & footer
+@mixin headfoot {
+    @media(max-width: $pc) {
+        .menu {
+            height: 70px;
+        }
+
+        .logo {
+            & .logo1 {
+                width: 75%;
+            }
+        }
+
+        .mainTap {
+            display: none;
+        }
+
+        .m_menuBtn {
+            display: flex;
+            height: 70px;
+        }  
+
+        .paddingBox {
+            height: 70px;
+        }
+
+    }
+
+    @media (max-width: $pad) {
+        footer{ 
+            & > div { 
+                // font-size: 12px;
+
+                & > ul  {
+                    & > li:first-child {
+                        display: grid;
+                        grid-template-columns: 2fr 2fr;
+                    }
+
+                    & > li:last-child {
+                        display: block;
+                    }
+                    
+                }
+            }
+        }
+    }
+
+    @media (max-width: $mobile) {
+        .head {
+            & > .pc_menu {
+                & .logo1 {
+                    width: 70%;
+                }
+            }
+        }
+
+        footer {
+            & > div {
+                padding: 20px 0;
+                font-size: 11px;
+
+                & > h2 {
+                    padding-bottom: 5px;
+                }
+            }
+        }
+
+        footer > div > ul > li {
+            line-height: 20px;
+        }
+    }
+}
+
+// 모바일 메뉴
+@mixin m_menu {
+    @media (max-width: $menu){
+       
+    }
+
+    @media (max-width: $mobile) {
+        .m_list a > svg {
+            width: 20px;
+        }
+
+        .m_list > li .m_sub {
+            padding: 5px;
+        }
+        
+        .m_list > li > a {
+            font-size: 25px;
+        }
+
+        .m_list > li .m_sub > li > a {
+            font-size: 20px;
+        }
+    }
+}
+
+// 문의 카카오톡 버튼
+@mixin sns {
+    @media (max-width: $pad) {
+        .in_sns{
+            right: 5%;
+            .inquery_popup{
+                @include wh(210px,null);
+                right: 3%;
+
+                .puplist{
+                    padding: 10px;
+                    .check label{
+                        font-size: 11px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: $mobile) {
+        .in_sns{
+            .in_kakao img{
+                @include wh(38px,38px);
+            }
+            .inquery{
+                @include wh(38px,38px);
+                line-height: 36px;
+                button{
+                    font-size: 13px;
+                    font-weight: 400;
+                }
+            }
+            .inquery_popup{
+                @include wh(220px,null);
+                .puplist{
+                    padding: 15px;
+                }
+    
+            }
+        }
+
+        .in_sns .in_kakao button::before {
+            top: 10%;
+            left: 10%;
+        }
+    }
+}
+
+// 메인
+@mixin main {
+    @media(max-width: $pc) {
+        .marCon {
+            width: 100%;
+        }
+
+        .solCon {
+            width: 85%;
+        }
+
+        .mainBox {
+            width: 80%;
+        }
+    }
+
+    @media(max-width: $menu) {
+        .mainBox {
+            flex-direction: column-reverse;
+        }
+
+        .mainTit {
+            font-size: 30px;
+        }
+
+        .subTit {
+            font-size: 16px;
+        }
+
+        .mTxt {
+            width: 90%;
+        } 
+
+        .mImg {
+            width: 60%;
+            padding-bottom: 10px;
+            position: relative;
+            // top: 40px;
+            // & > img {
+            //     animation: none;
+            // }
+        }
+
+        .mTxt {
+            background: rgba(255,255,255,0.7);
+            padding: 50px 15px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            position: relative;
+            z-index: 1;
+
+            & > p {
+                font-size: 1.7vw;
+                line-height: normal;
+                color: $bk;
+                text-align: center;
+                font-weight: normal;
+
+                &.tHide {
+                    display: none;
+                }
+
+                &.big {
+                    font-size: 4vw;
+                    padding-bottom: 10px;
+                    line-height: 5vw;
+                }
+            }
+        }
+
+        .moreBtn {
+            width: 150px;
+            margin: 10px auto 0;
+
+            & > a {
+                padding: 10px 25px;
+            }
+        }
+
+        
+
+        .adBox {
+            & > p {
+                font-size: 18px;
+            }
+        }
+
+        .adImg {
+            width: 100px;
+
+            img {
+                width: 100%;
+            }
+        }
+        
+
+    }
+
+    @media (max-width: $pad) {
+        .mainBox {
+            width: 90%;
+        } 
+
+        .mImg {
+            width: 80%;
+        }
+
+        .mTxt{
+            width: 100%;
+            padding: 25px 15px;
+            & > p {
+                font-size: 14px;
+
+                &.big {
+                    font-size: 25px;
+                    padding-bottom: 10px;
+                    line-height: normal;
+                }
+            }
+        }
+
+        .marCon {
+            width: 90%;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .adBox {
+            & > p {
+                font-size: 16px;
+                padding-top: 10px;
+
+                & > span {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .adImg {
+            width: 90px
+        }
+
+        .solCon {
+            grid-template-columns: 1fr;
+        }
+
+        .solBox {
+            justify-content: center;
+            flex-direction: column;
+            padding: 10px 0;
+
+            & > .solimg {
+                margin: auto;
+            }
+        }
+
+        .solTxt {
+            padding-left: 0;
+            justify-content: center;
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .solFlex {
+
+            & > p {
+                padding-bottom: 5px;
+                font-size: 18px;
+            }
+
+            & > span {
+                font-size: 14px;
+            }
+            
+        }
+
+    }
+
+    @media (max-width: $mobile) {
+        .mainTit {
+            font-size: 25px;
+        }
+
+        .subTit {
+            font-size: 15px;
+        }
+
+
+        .mTxt{
+            width: 100%;
+            & > p {
+                font-size: 14px;
+                &.big {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .moreBtn {
+            width: 130px;
+
+            & > a {
+                font-size: 14px;
+                padding: 10px 20px;
+            }
+        }
+
+        
+    }
+}
+
+// 기업소개
+@mixin brand {
+    @media(max-width:$pc) {
+        .org {
+            & > .on_list {
+                width: 100%;
+                margin: auto;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 25px;
+            }
+        }
+    }
+
+    @media(max-width:$menu) {
+        .orgTit {
+            & > .orgImg {
+                width: 100%;
+            }
+        }
+
+        .orgIntro {
+        
+            & > p {
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+
+        .orgBan {
+            & > h2 {
+                font-size: 35px;
+            }
+
+            & > p {
+                font-size: 18px;
+                line-height: 26px;
+            }
+        }
+
+        .org {
+            & > .on_list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .orgExp  {
+            & > .wrap {
+                & > h2 {
+                    font-size: 30px;
+
+                    & > img {
+                        width: 150px;
+                    }
+                }
+            }
+        }
+
+
+        .online {
+            & > h4 {
+                padding: 30px 0;
+
+                & > img {
+                    width: 40px;
+                }
+            }
+
+            & > .on_list {
+                width: 80%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                margin: auto;
+            }
+        }
+
+        .onCard, .off_list > .onCard {
+            justify-self: center;
+            margin-bottom: 50px;
+
+            &.three {
+                position: relative;
+                left: 50%;
+            }
+        }
+    }
+
+    @media(max-width:$pad) {
+        .orgIntro {
+        
+            & > h2 {
+                font-size: 22px;
+            }
+            
+        }
+
+        .orgIntro {
+            text-align: center;
+        }
+
+        .orgTit {
+            height: 300px;
+        }
+
+        .orgBan {
+            & > h2 {
+                font-size: 30px;
+                padding-bottom: 15px;
+            }
+
+            & > p {
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+
+        .org > .on_list > .onCard.rgrg > .on_txt > .on_tit {
+            font-size: 16px;
+        }
+
+        .org > .on_list > .onCard.rgrg > .on_txt > .on_ex {
+            font-size: 14px;
+        }
+
+        .orgExp  {
+            & > .wrap {
+                & > h2 {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    @media(max-width:$mobile) {
+
+        .orgIntro {
+            padding: 10px;
+
+            & > h2 {
+                font-size: 18px;
+            }
+
+            & > p {
+                font-size: 12px;
+            }
+            
+        }
+
+        .orgBan {
+            & > h2 {
+                font-size: 25px;
+            }
+        }
+
+        .brand {
+            padding: 50px 0;
+
+            
+        }
+
+        .orgExp > .wrap {
+            & > h2 {
+                font-size: 20px;
+                text-align: center;
+                margin-bottom: 5px;
+
+                & > img {
+                    width: 120px;
+                }
+            }
+        }
+
+        .online {
+            & > h4 {
+                padding: 25px 0;
+                font-size: 18px;
+                
+                &::before {
+                    @include wh(20px, 20px);
+                    left: -60%;
+                }
+
+                & > img {
+                    width: 30px;
+                }
+            }
+
+            & > .on_list {
+                grid-template-columns: 1fr;
+            }
+
+            &.offline {
+        
+                & > h4 {
+        
+                    &::before {
+                        left: -45%;
+                    }
+                }
+            }
+        }
+
+        .onCard, .off_list > .onCard {
+            margin-bottom: 35px;
+
+            &.three {
+                left: auto;
+            }
+        }
+    }
+}
+
+// 복리후생
+@mixin welfare {
+    @media (max-width: $pc) {
+        .welCon {
+            width: 90%;
+        }
+    }
+
+    @media(max-width: $menu) {
+        .welCon {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    @media(max-width: $pad){
+        .orgTit {
+            height: 220px;
+        } 
+
+        .wel {
+            padding: 50px 0;
+        }
+
+        .welCon {
+            width: 80%;
+            gap: 30px;
+        }
+
+        .welBox {
+            box-shadow: 0 0 5px 2px rgba(91, 189, 255, 0.192);
+        }
+    }
+
+    @media(max-width: $mobile) {
+        .welCon {
+            width: 90%;
+            gap: 15px;
+        }
+
+        .welTxt {
+            padding-top: 5px;
+
+            & > p {
+                font-size: 16px;
+                padding-bottom: 0;
+            }
+
+            & > span {
+                font-size: 14px;
+            }
+        }
+
+        .welImg {
+            & > img {
+                @include wh(90%, 90%);
+            }
+        }
+    }
+}
+
+// 포트폴리오
+@mixin port {
+    @media (max-width: $pad) {
+        .portTxt {
+            & > h2 {
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+// 제작과정 아이콘 (공통)
+@mixin dIcon {
+    @media(max-width: $menu) {
+        .proCon {
+            width: 500px;
+            flex-direction: column;
+        }
+
+        .proBox {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 50px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .proImg {
+            margin: unset;
+        }
+    }
+
+    @media(max-width: $pad) {
+        .proImg {
+            & > img {
+                width: 80%;
+            }
+        }
+
+        .proBox {
+            & > p {
+                font-size: 16px;
+            }
+        }
+    }
+
+    @media(max-width: $mobile) {
+        .proCon {
+            width: 85%;
+        }
+    }
+}
+
+// 디자인 상담 문의 (공통)
+@mixin dContact {
+    @media(max-width: $menu) {
+        .desCon {
+            width: 80%;
+            flex-direction: column;
+        }
+
+        .desImg, .desTxt {
+            width: 100%;
+        }
+
+        .desTxt {
+            padding-left: 0;
+            padding-top: 100px;
+            text-align: center;
+        }
+
+        .desBtn {
+            margin: 20px auto;
+        }
+    }
+
+    @media(max-width: $pad) {
+        .desTxt {
+            padding-top: 70px;
+        }
+
+        .desTxt {
+            & > h2 {
+                font-size: 30px;
+                line-height: 45px;
+            }
+        }
+
+        .desImg > div > div > p {
+            font-weight: 600;
+        }
+
+        .desBtn {
+            border: 2px solid #2f65f0;
+
+            & > a {
+                font-size: 16px;
+            }
+        }
+    }
+
+    @media(max-width: $mobile) {
+        .desTxt {
+            padding-top: 40px;
+        }
+
+        .desCon {
+            width: 90%;
+        }
+
+        .desTxt {
+            & > h2 {
+                font-size: 25px;
+                line-height: 35px;
+            }
+        }
+
+        .desBtn {
+            & > a {
+                padding: 7px 30px;
+            }
+        }
+    }
+}
+
+// 홈페이지 제작
+@mixin home {
+    @media(max-width: $pc) {
+        .hBan {
+            width: 90%;
+        }
+    }
+    
+    @media(max-width: $menu) {
+        .home {
+            height: auto;
+            padding: 80px 0;
+        }
+
+        .hBan {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .hbTxt {
+            padding-bottom: 30px;
+
+            & > p {
+                line-height: 28px;
+            }
+        }
+
+        .hbImg {
+            padding-left: 0;
+
+            & > img {
+                width: 100%;
+                // animation: none;
+            }
+        }
+
+        .hChart, .hTxt {
+            width: 80%;
+        }
+
+        .moCon {
+            flex-direction: column;
+
+            & > div {
+                width: 100%;
+
+                &:first-child {
+                    margin-bottom: 50px;
+                }
+            }
+        }
+
+    }
+
+    @media(max-width: $pad) {
+        .wrap{
+            & > h2 {
+                font-size: 25px;
+                padding-bottom: 20px;
+            }
+
+            & > p {
+                font-size: 16px;
+            }
+        }
+
+        .designPro {
+            & > h3 {
+                font-size: 25px;
+                padding-bottom: 30px;
+            }
+        }
+
+        .hBan {
+            width: 90%;
+        }
+
+        .hbTxt {
+            & > h2 {
+                font-size: 30px;
+                line-height: 40px;
+            }
+
+            & > p {
+                font-size: 16px;
+                line-height: 25px;
+            }
+        }
+
+        .hOpt {
+            padding: 50px 0;
+        }
+
+        .hChart, .hTxt {
+            font-size: 14px;
+            width: 90%;
+        }
+
+        .moCon {
+            padding: 50px 0;
+        }
+
+        .hpImg {
+            padding-top: 50px;
+        }
+
+        .moLogo {
+            & > .mL {
+                width: 70%;
+            }
+        }
+
+        .monitor {
+            padding-bottom: 0;
+        }
+
+        // 블로그
+        .hpImg.bsFree {
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+    @media(max-width: $mobile) {
+        .wrap{
+            & > h2 {
+                font-size: 20px;
+                padding-bottom: 20px;
+            }
+            
+            & > p {
+                font-size: 14px;
+                line-height: 22px;
+            }
+        }
+
+        .designPro {
+            & > h3 {
+                font-size: 20px;
+            }
+        }
+
+        .hBan {
+            width: 90%;
+        }
+
+        .hChart, .hTxt {
+            font-size: 12px;
+        }
+
+        .hbTxt {
+            & > h2 {
+                font-size: 20px;
+                line-height: 30px;
+            }
+
+            & > p {
+                font-size: 14px;
+            }
+        }
+
+        .hPort {
+            padding: 0;
+        }
+
+        .moImg {
+            & > img {
+                width: 90%;
+            }
+        }
+
+        .moLogo {
+            & > .mL {
+                width: 90%;
+            }
+        }
+
+        .mlTxt, .moTxt {
+            & > p {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+// 광고문의
+@mixin contact {
+    @media (max-width: $pc){
+
+    }
+
+    @media (max-width: $pad){
+        .contact {
+            h2 {
+                font-size: 7vw;
+                font-weight: 600;
+            }
+
+            .contact_form {
+                width: 100%;
+                border-radius: 0;
+                padding: 30px 0;
+                margin-top: 15px;
+
+                & .contact_list {
+                    width: 80%;
+                }
+
+                .personal {
+                    width: 80%;
+                    margin: auto;
+
+                    // & > span {
+                    //     font-size: 10px;
+                    // }
+
+                    & > .conBtn {
+                        margin-top: 10px;
+                        border-radius: 4px;
+                        position: inherit;
+                        font-size: 18px;
+                        padding: 8px 40px;
+                    }
+
+                }
+
+                
+            }
+        }
+    }
+
+    @media (max-width: $mobile){
+        .contact {
+            & .contact_form {
+                height: auto;
+
+                & .contact_list {
+                    & > li {
+                        & > .contact_grid {
+                            gap: 10px;
+                            grid-template-columns: 1fr;
+                        }
+                    }
+                }
+            }
+        }
+
+        .contact .contact_form .personal > .conBtn {
+            display: block;
+            margin: 15px auto 0;
+            font-size: 16px;
+        }
+
+        .p_popup {
+            width: 320px;
+            margin-top: 200px;
+        }
+    }
+}
+
+//배경 넓이,폰트 공통
+@mixin bg_wrap {
+    @media (max-width: $menu){
+        .C_wrap{
+            h2{
+                font-size: 40px;
+                line-height: 60px;
+            }
+        }
+        
+    }
+    @media (max-width: $pad){
+        .bg_wrap{
+            @include wh(95%,null);
+        }
+        .C_wrap{
+            h2{
+                font-size: 5vw;
+                line-height: 44px;
+            }
+            h4{
+                font-size: 16px;
+            }
+        }
+        
+    }
+    @media (max-width: $mobile){
+        .bg_wrap{
+            @include wh(100%,null);
+            padding: 10% 8%;
+        }
+        .C_wrap{
+            h2{
+                font-size: 28px;
+                line-height: 34px;
+            }
+            h3{
+                font-size: 17px;
+                margin-bottom: 5%;
+                line-height: 26px;
+                margin-top: 2%;
+            }
+        }
+        
+        
+    }
+}

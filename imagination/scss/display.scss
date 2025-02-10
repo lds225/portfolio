@@ -1,0 +1,466 @@
+@import "header.scss";
+
+
+//공통
+.C_wrap{
+    h2{
+        font-size: 50px;
+        line-height: 62px;
+        letter-spacing: 3px;
+        font-weight: 900;
+    }
+    h3{
+        font-size: 20px;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        line-height: 30px;
+    }
+    h4{
+        font-size: 20px;
+        margin-top: 10px;
+        line-height: 1.7;
+        font-weight: 400;
+    }
+}
+.bg_wrap{
+    @include wh(85%,null);
+    margin: auto;
+    padding: 4% 8%;
+}
+
+
+
+
+//메인화면 시작
+.dis_wrap{
+    //디스플레이 상단
+    .disbg{
+        background: url(../image/display/disbg3.jpg) no-repeat;
+        background-position: center;
+    }
+    .disM{
+        text-align: center;
+        color: #fff;
+        .displayH{
+            p{
+                font-size: 20px;
+                line-height: 32px;
+            }
+        }
+        .displayI{
+            margin-top: 4%;
+            ul{
+                display: flex;
+                justify-content: center;
+                gap: 6%;
+                li{
+                    img{
+                        @include wh(55px,null);
+                    }
+                    animation: slide_top .5s linear forwards ;
+                    opacity: 0;
+                    &:nth-child(1){
+                        animation-delay: 0.2s;
+                    }
+                    &:nth-child(2){
+                        animation-delay: 0.3s;
+                    }
+                    &:nth-child(3){
+                        animation-delay: 0.4s;
+                    }
+                    &:nth-child(4){
+                        animation-delay: 0.5s;
+                    }
+                }
+            }
+        }
+    }
+    @keyframes slide_top{
+        0%{
+            transform: translateY(-150px);
+            opacity: 0;
+        }
+        100%{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    //광고전략
+    .displaySH_bg{
+        background-color: #fffbf4;
+        .text_H{
+            text-align: center;
+            h2{
+                padding-bottom: 15px;
+                border-bottom: 1px solid;
+                color: #333;
+                display: inline-block;
+            }
+            h3{
+                font-weight: 500;
+            }
+        }
+        .disI_T{
+            display: flex;
+            align-items: center;
+            margin-bottom: 3%;
+            gap: 5%;
+            .disI{
+                padding: 1.5%;
+                background: #ffc400;
+                border-radius: 10px;
+                img{
+                    @include wh(80px,80px);
+                }
+            }
+        }
+        .mark{
+            margin-bottom: 10px;
+            .mark_l{
+                @include wh(150px,1px);
+                background: #bf9300;
+                display: inline-block;
+                margin: 0 12px 8px 0;
+                display: none;
+            }
+            p{
+                font-size: 25px;
+                line-height: 25px;
+                color: #bf9300;
+                font-weight: 600;
+                display: inline-block
+            }
+            .mark_r{
+                @include wh(150px,1px);
+                background: #bf9300;
+                display: inline-block;
+                margin: 0 0 8px 12px;
+            }
+        }
+        .disS_T{
+            p:first-child{
+                font-size: 20px;
+                line-height: 20px;
+                line-height: 35px;
+                font-weight: 700;
+            }
+            p{
+                font-size: 17px;
+                line-height: 25px;
+            }
+        }
+    }
+    //스케쥴 스텝
+    .market_sch{
+        .sch_H{
+            text-align: center;
+            h2{
+                display: inline-block;
+                padding-bottom: 15px;
+                border-bottom: 1px solid;
+            }
+            h3{
+                font-weight: 500;
+            }
+        }
+        .market_ico{
+            display: flex;
+            flex-direction: column;
+            margin-top: 25px;
+            .icon {
+                margin-bottom: 15px;
+                img{
+                    @include wh(90px,90px);
+                }
+            }
+            .icon_01{
+                margin-bottom: 4%;
+            }
+            .icon_01,.icon_02{
+                @include flex(null);
+                gap: 8%;
+            }
+            .step{
+                text-align: center;
+                p{
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 28px;
+                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                    letter-spacing: 1px;
+                }
+                & p:last-child{
+                    font-size: 18px;
+                    color: #2c3268;
+                    letter-spacing: 0;
+                    line-height: 20px;
+                    font-family: 'Nanum Gothic', sans-serif;
+                }
+            }
+        }
+    }
+    //배너 카드
+    .disAD{
+        background: #fffbf4;
+        .bg_wrap{
+            @include wh(100%,null);
+            padding: 5% 6%;
+        }
+        .disAD_card {
+            display: flex;
+            flex-direction: column;
+            & > div{
+                @include flex(null);
+                gap: 2%;
+                margin-bottom: 2%;
+            }
+            .card{
+                transition: .4s ease;
+                @include wh(25%,430px);
+                text-align: center;
+                background: #fff;
+                box-shadow: rgb(204,204,204) 5px 5px 10px;
+                padding: 15px;
+                h3{
+                    margin-top: 4%
+                }
+                img{
+                    @include wh(100%, null);
+                }
+                p{
+                    font-size: 17px;
+                    font-weight: 300;
+                    line-height: 1.5;
+                    padding: 10px 0 25px 0;
+                }
+                
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//반응형
+
+@media (max-width: $menu) {
+    .dis_wrap{
+        .disM{
+            .displayH{
+                p{
+                    font-size: 17px;
+                    line-height: 28px;
+                }
+            }
+        }
+        .market_sch{
+            .market_ico {
+                .icon{
+                    img{
+                        @include wh(80px,80px);
+                    }
+                }
+            }
+        }
+        .disAD{
+            .disAD_card{
+                & > div{
+                    flex-direction: column;
+                }
+                .card{
+                    @include wh(100%,null);
+                    padding: 5%;
+                    margin-bottom: 20px;
+                    .imgI{
+                        img{
+                            width: 400px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $pad) {
+    .dis_wrap{
+        .disM{
+            .displayH{
+                p{
+                    font-size: 17px;
+                }
+            }
+        }
+        .displaySH_bg{
+            .disI_T{
+                margin-bottom: 10%;
+                flex-direction: column;
+                .disI{
+                    padding: 2%;
+                    background: #ffc400;
+                    border-radius: 10px;
+                    img{
+                        @include wh(88px,88px);
+                    }
+                }
+            }
+            .disT_M{
+                text-align: center;
+                .mark{
+                    margin: 10px 0; 
+                    .mark_l{
+                        @include wh(100px,1px);
+                        display: inline-block;
+                    }
+                    .mark_r{
+                        @include wh(100px,1px);
+                    }
+                }
+            }
+        }
+        .market_sch{
+            .market_ico {
+                .icon_01{
+                    flex-wrap: wrap;
+                    margin-bottom: 0;
+                    .step{
+                        @include wh(40%,null);
+                        margin-bottom: 20px;
+                    }
+                }
+                .icon_02{
+                    flex-wrap: wrap;
+                    .step{
+                        @include wh(40%,null);
+                        margin-bottom: 20px;
+                    }
+                }
+                .step{
+                    p{
+                        font-size: 16px;
+                    }
+                    & p:last-child{
+                        line-height: 21px;
+                        font-size: 15px;
+                    }
+                }
+                .icon{
+                    img{
+                        @include wh(80px,80px);
+                    }
+                }
+            }
+        }
+        .disAD{
+            .disAD_card{
+                flex-wrap: wrap;
+                .card{
+                    @include wh(100%,null);
+                    padding: 5%;
+                    margin-bottom: 20px;
+                    .imgI{
+                        img{
+                            width: 400px;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+@media (max-width: $mobile) {
+    .dis_wrap{
+        .disM{
+            .displayH {
+                p{
+                    // line-height: 22px;
+                    // font-size: 15px;
+                    display: none;
+                }
+            }
+            .displayI{
+                padding-top: 6%;
+                ul{
+                    flex-wrap: wrap;
+                    li{
+                        @include wh(47%,null);
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+        .displaySH_bg{
+            .disI_T{
+                .disI{
+                    padding: 4%;
+                    img{
+                        @include wh(75px,75px);
+                    }
+                }
+            }
+            .disS_T{
+                & p:first-child{
+                    margin-bottom: 10px;
+                    line-height: 30px;
+                }
+            }
+        }
+        .market_sch{
+            .market_ico {
+                .icon_01,.icon_02{
+                    gap:12%;
+                }
+                .icon{
+                    img{
+                        @include wh(70px,70px);
+                    }
+                }
+            }
+        }
+        .disAD{
+            .disAD_card{
+                .card{
+                    @include wh(null,100%);
+                    .imgI{
+                        img{
+                            @include wh(100%,null);
+                        }
+                        p{
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+
+@include bg_wrap;
+
+
+@media (hover: hover) {
+    .disAD{
+        .disAD_card{
+            .card{
+                &:hover{
+                    transform: translateY(-15px);
+                }
+            }
+        }
+    }
+}

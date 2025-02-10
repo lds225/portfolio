@@ -1,0 +1,24 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="50" cy="50" r="50" fill="url(#paint0_linear)"/>
+<path d="M43.2341 17.2131V30.7578C43.2341 31.6559 42.8691 32.5172 42.2193 33.1522C41.5695 33.7872 40.6881 34.144 39.7692 34.144H25.9092" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M74.4189 51.0749V23.9854C74.4189 22.1893 73.6888 20.4667 72.3892 19.1967C71.0896 17.9266 69.3269 17.2131 67.489 17.2131H43.2341L25.9093 34.144V74.7782" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="73.2644" y="60.1048" width="2.30998" height="5.07928" rx="1.15499" fill="white"/>
+<rect x="73.2642" y="68.0059" width="2.30998" height="5.07928" rx="1.15499" fill="white"/>
+<rect x="65.1792" y="51.6393" width="2.30998" height="5.07928" rx="1.15499" fill="white"/>
+<rect x="65.179" y="59.5404" width="2.30998" height="5.07928" rx="1.15499" fill="white"/>
+<rect x="57.094" y="58.9761" width="2.30998" height="5.07928" rx="1.15499" fill="white"/>
+<rect x="49.009" y="55.0255" width="2.30998" height="5.07928" rx="1.15499" fill="white"/>
+<rect x="49.009" y="62.9267" width="2.30998" height="5.07928" rx="1.15499" fill="white"/>
+<rect x="40.9241" y="74.2139" width="2.30998" height="5.07928" rx="1.15499" fill="white"/>
+<rect x="57.094" y="67.4415" width="2.30998" height="5.07928" rx="1.15499" fill="white"/>
+<rect x="24.7539" y="80.9863" width="2.30998" height="5.07928" rx="1.15499" fill="white"/>
+<rect x="49.009" y="70.8278" width="2.30998" height="5.07928" rx="1.15499" fill="white"/>
+<rect x="32.8394" y="69.6991" width="2.30998" height="5.07928" rx="1.15499" fill="white"/>
+<rect x="32.8391" y="77.6002" width="2.30998" height="5.07928" rx="1.15499" fill="white"/>
+<defs>
+<linearGradient id="paint0_linear" x1="50" y1="0" x2="50" y2="100" gradientUnits="userSpaceOnUse">
+<stop stop-color="#B9DAFC"/>
+<stop offset="1" stop-color="#C7BFFD"/>
+</linearGradient>
+</defs>
+</svg>

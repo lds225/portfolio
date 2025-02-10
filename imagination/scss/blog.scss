@@ -1,0 +1,380 @@
+@import "header.scss";
+
+
+// 타이틀+ 내용설명 폰트 사이즈 
+.wrap{
+    & > h2 {
+        font-size: 35px;
+        font-weight: 800;
+        padding-bottom: 20px;
+        color: $bk;
+    }
+    
+    & > p {
+        font-size: 18px;
+        line-height: 30px;
+        color: $bk;
+        font-weight: 600;
+    }
+}
+
+
+// 블로그 제작 메인
+.home {
+    height: 85vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.homeBg.blogBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/blog/blog1.svg");
+    background-repeat: none;
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+.hBan {
+    @include flex(null);
+}
+
+.hbTxt {
+    animation: fadeDown 1s ease;
+
+    & > h2 {
+        font-size: 45px;
+        font-weight: 800;
+        line-height: 55px;
+        color: #43ced6;
+        padding-bottom: 20px;
+    }
+
+    & > p {
+        font-size: 18px;
+        font-weight: 600;
+        color: $bk;
+        line-height: 30px;
+    }
+
+}
+
+.hbImg {
+    padding-left: 80px;
+
+    & > img {
+        width: 500px;
+        animation: float 1s ease;
+    }
+}
+
+
+// 배너 제작과정
+.designPro {
+    background-color: rgb(235, 246, 255);
+    padding: 50px 0;
+
+    & > h3 {
+        font-size: 35px;
+        font-weight: 800;
+        color: #444444;
+        text-align: center;
+        padding-bottom: 50px;
+    }
+}
+
+.proCon {
+    width: 65%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: .4s ease;
+}
+
+.proImg {
+    @include wh(80px, 90px);
+    display: flex;
+    margin: auto;
+
+    & > img {
+        width: 100%;
+        transition: .2s ease;
+    }
+}
+
+.proBox {
+
+    & > p {
+        font-size: 18px;
+        text-align: center;
+        font-weight: 600;
+        color: #444444;
+        padding: 20px 0;
+    }
+}
+
+// 블로그스킨 제작 표
+.hOpt {
+    padding: 80px 0;
+}
+
+.hChart {
+    width: 60%;
+    margin: auto;
+    display: table;
+    color: #666666;
+    border: 1px solid #eee;
+    border-collapse: collapse;
+    transition: 0.2s ease;
+    line-height: 22px;
+
+    div {
+        border: 1px solid #eee;
+        padding: 12px 5px;
+        text-align: center;
+    
+    }
+}
+
+.hRow {
+    display: table-row;
+
+    &.hHeading {
+        background-color: #7bc3f3;
+        color: #fff;
+        font-weight: 600;
+
+    }
+
+    .hCell {
+        display: table-cell;
+        vertical-align: middle;
+        & > p {
+            & > span {
+                color: #043dcf;
+                font-size: 12px;
+            }
+        }
+        
+    }
+}
+
+.hRow {
+    & > div:first-child  {
+        width: 20%;
+        font-weight: 600;
+    }
+}
+
+.hTxt {
+    padding-top: 10px;
+    width: 60%;
+    margin: auto;
+    font-size: 14px;
+    color: #043dcf;
+}
+
+// 홈페이지형 블로그스킨
+.device {
+    text-align: center;
+    color: $bk;
+    padding: 50px 0;
+
+    & > .wrap {
+        & > p {
+            line-height: 35px;
+            font-weight: 400;
+    
+            & > span {
+                font-weight: 600;
+            }
+        }
+    }
+    
+}
+
+.devCon {
+    display: flex;
+    justify-content: center;
+    padding-top: 35px;
+}
+
+.devImg {
+    & > img {
+        width: 100%;
+    }
+}
+
+// 블로그 포폴
+.hPort {
+    text-align: center;
+    color: $bk;
+}
+
+.hpTxt {
+    padding: 60px 0;
+    background-color: #8091f1;
+
+    &.bsFbg {
+        background-color: #e07dba;
+    }
+    
+    & > .wrap {
+        & > p, & > h2 {
+            color: #fff;
+        }
+    }
+  
+    & > p {
+        font-weight: 600;
+    }
+
+}
+
+.hpImg {
+    & > img {
+        width: 100%;
+    }
+
+    &.bsFree {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-top: 0;
+    }
+}
+
+// 문의하기
+.dContact {
+    background-color: #edf4fa;
+}
+
+.desCon {
+    width: 65%;
+    margin: auto;
+    display: flex;
+}
+
+
+.desImg {
+    width: 55%;
+    // .chat
+    & > div {
+        position: relative;
+        text-align: right;
+        color: #fff;
+
+        // chatTxt
+        & > div {
+            width: 250px;
+            position: absolute;
+            top: 22px;
+            right: 0;
+            & > p {
+                font-weight: 600;
+                line-height: 22px;
+                text-align: left;
+            }
+        }
+        
+        &:nth-child(even) {
+            text-align: left;
+            padding: 20px 0;
+            color: $bk;
+
+            & > div {
+                top: 45px;
+                left: 55px;
+            }
+        }
+    }
+}
+
+
+
+.desTxt {
+    width: 45%;
+    padding-left: 90px;
+    color: $bk;
+
+    & > h2 {
+        font-size: 45px;
+        line-height: 60px;
+        font-weight: 800;
+        padding-bottom: 20px;
+        & > span {
+            font-weight: 400;
+        }
+    }
+
+    & > p {
+        line-height: 25px;
+    }
+}
+
+.desBtn {
+    margin-top: 20px;
+    border: 1px dashed #2f65f0;
+    border-radius: 5px;
+    width: fit-content;
+    transition: .2s ease;
+    
+    & > a {
+        font-size: 18px;
+        display: block;
+        color: #2f65f0;
+        padding: 10px 35px;
+        font-weight: 600;
+        transition: .2s ease;
+    }
+}
+
+
+// 애니메이션
+@keyframes float {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+  }
+
+  @keyframes fadeDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+// 호버
+@media (hover:hover) {
+    .desBtn {
+        &:hover {
+            background-color: #2f65f0;
+            border-radius: 25px;
+    
+            & > a {
+                color: #fff;
+            }
+        }
+    } 
+}
+
+// 반응형
+@include dIcon; // 디자인 제작과정
+@include dContact; // 디자인 문의하기
+@include home;

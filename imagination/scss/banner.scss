@@ -1,0 +1,501 @@
+@import "header.scss";
+
+
+
+//공통
+.bg_wrap{
+    @include wh(85%,null);
+    margin: auto;
+    padding: 4% 7%;
+}
+h2{
+    font-size: 50px;
+    line-height: 1.3;
+    letter-spacing: 1px;
+    font-weight: 900;
+    color: #322122;
+}
+h3{
+    font-size: 40px;
+    color: #333333;
+    line-height: 50px;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+}
+.hide{
+    visibility: hidden;
+    text-align: center;
+    margin: 10px 0 25px;
+    font-size: 20px;
+}
+
+// 제작과정
+.designPro {
+    background-color: rgb(235, 246, 255);
+    padding: 50px 0;
+
+    & > h3 {
+        font-size: 30px;
+        font-weight: 800;
+        color: #444444;
+        text-align: center;
+        padding-bottom: 50px;
+    }
+}
+
+.proCon {
+    width: 65%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: .4s ease;
+}
+
+.proImg {
+    @include wh(80px, 90px);
+    display: flex;
+    margin: auto;
+
+    & > img {
+        width: 100%;
+        transition: .2s ease;
+    }
+}
+
+.proBox {
+
+    & > p {
+        font-size: 18px;
+        text-align: center;
+        font-weight: 600;
+        color: #444444;
+        padding: 20px 0;
+    }
+}
+
+
+// 문의하기
+.dContact {
+    background-color: #edf4fa;
+}
+
+.desCon {
+    width: 65%;
+    margin: auto;
+    display: flex;
+}
+
+
+.desImg {
+    width: 55%;
+    // .chat
+    & > div {
+        position: relative;
+        text-align: right;
+        color: #fff;
+
+        // chatTxt
+        & > div {
+            width: 250px;
+            position: absolute;
+            top: 22px;
+            right: 0;
+            & > p {
+                font-weight: 800;
+                line-height: 22px;
+                text-align: left;
+            }
+        }
+        
+        &:nth-child(even) {
+            text-align: left;
+            padding: 20px 0;
+            color: $bk;
+
+            & > div {
+                top: 45px;
+                left: 55px;
+            }
+        }
+    }
+}
+
+
+
+.desTxt {
+    width: 45%;
+    padding-left: 90px;
+    color: $bk;
+
+    & > h2 {
+        font-size: 45px;
+        line-height: 60px;
+        font-weight: 800;
+        padding-bottom: 20px;
+        & > span {
+            font-weight: 400;
+        }
+    }
+
+    & > p {
+        line-height: 25px;
+    }
+}
+
+.desBtn {
+    margin-top: 20px;
+    border: 1px dashed #2f65f0;
+    border-radius: 5px;
+    width: fit-content;
+    transition: .2s ease;
+    
+    & > a {
+        font-size: 18px;
+        display: block;
+        color: #2f65f0;
+        padding: 10px 35px;
+        font-weight: 600;
+        transition: .2s ease;
+    }
+}
+
+
+//메인배너 시작
+.banner_wrap{
+    //메인상단
+    .main_B{
+        background: url(../image/banner/bannerbg.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+        .bg_wrap{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        .B_r{
+            margin: 7% 3% 7% 0;
+            h2,p{
+                margin: 5% 0 ;
+            }
+            h2{
+                animation: slide_down 1s ease ;
+                color: #0861aa;
+            }
+            p{
+                color: #322122;
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 1.7;
+                animation: slide_right 1s ease;
+            }
+        }
+    }
+    
+    //옵션 표
+    .B_table{
+        ul{
+            display: grid;
+            grid-template-columns: 2fr 8fr;
+            text-align: center;
+            font-size: 18px;
+            border: 1px solid #e0dede;
+            border-right: 0;
+            color: #747474;
+            li{
+                padding: 15px 20px;
+                border: 0;
+                border-right: 1px solid #e0dede;
+                &:first-child{
+                    font-weight: 600;
+                }
+            }
+        }
+        .table1{
+            background: #7ac9ff;
+            color: #fff;
+            font-weight: 600;
+            li{
+                padding: 25px;
+            }
+        }
+        .text_S{
+            margin: 20px 0;
+            font-size: 17px;
+            color: #636363;
+            p{
+                margin-bottom: 10px;
+                letter-spacing: -0.05em;
+            }
+        }
+    }
+    //디자인 배너
+    .D_banner{
+        .banner_L{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2%;
+            .card{
+                p{
+                    color: #322122;
+                    line-height: 25px;
+                    font-size: 18px;
+                    font-weight: 600;
+                    margin-top: 20px;
+                }
+                @include wh(31.33%,null);
+                img{
+                    @include wh(90%,null);
+                }
+                text-align: center;
+            }
+        }
+    }
+    //디자인,마케팅
+    .D_M{
+        @include flex(null);
+        &>div{
+            @include wh(50%,null);
+        }
+        .DM_I{
+            text-align: center;
+            padding: 40px 15px;
+            img{
+                @include wh(380px,null);
+                transition: .4s ease;
+            }
+            & img:hover{
+                transform: scale(1.1);
+            }
+            h4{
+                font-size: 40px;
+                color: #fff;
+                padding-bottom: 25px;
+                letter-spacing: 1px;
+                font-weight: 800;
+            }
+            p{
+                font-size: 20px;
+                color: #fff;
+                line-height: 28px;
+                font-weight: 600;
+                margin-bottom: 30px;
+            }
+        }
+        .d_bg{
+            background: linear-gradient(115deg, #588fec 10%, #5e4cb6 100%);
+        }
+        .m_bg{
+            background: linear-gradient(110deg, #44dbeb 10%, #1c92d8 100%);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//반응형
+
+@media (max-width: $menu) {
+    .bg_wrap{
+        padding: 4% 0;
+        @include wh(90%, null);
+    }
+    h2{
+        font-size: 37px;
+        text-align: right;
+    }
+    h3{
+        font-size: 35px;
+        line-height: 40px;
+    }
+    .banner_wrap {
+        .main_B{
+            .B_r{
+                p{
+                    text-align: right;
+                }
+            }
+        }
+        .D_banner{
+            .banner_L{
+                .card{
+                    @include wh(48.33%, null);
+                }
+            }
+        }
+        .D_M {
+            flex-direction: column;
+            &>div{
+                @include wh(100%, null);
+            }
+            .DM_I{
+                h4{
+                    font-size: 35px;
+                }
+                p{
+                    font-size: 18px;
+                }
+                img{
+                    @include wh(320px, null);
+                }
+            }
+        }
+        
+    }
+}
+
+@media (max-width: $pad) {
+    h2{
+        font-size: 40px;
+    }
+    h3{
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .banner_wrap {
+        .main_B{
+            background-position: right center;
+
+            .B_r{
+                p{
+                    visibility: hidden;
+                }
+            }
+        }
+        .B_table {
+            ul{
+                li{
+                    padding: 15px;
+                    letter-spacing: -0.05em;
+                }
+            }
+        }
+        
+    }
+    .designPro > h3 {
+        padding-bottom: 30px;
+    }
+}
+
+@media (max-width: $mobile) {
+    h2{
+        line-height: 30px;
+        font-size: 20px;
+    }
+    h3{
+        font-size: 28px;
+        line-height: 35px;
+    }
+    .banner_wrap {
+        .main_B{
+            .B_r{
+                margin: 7% 3% 25% 0;
+                p{
+                    display: none;
+                }
+            }
+        }
+        .B_table {
+            .table1{
+                li{
+                    padding: 20px;
+                    line-height: 40px;
+                }
+            }
+            .table3,.table5,.table6,.table7{
+                & li:last-child{
+                    line-height: 40px;
+                }
+            }
+            ul{
+                font-size: 15px;
+                grid-template-columns: 0.6fr 1.2fr;
+                li{
+                    padding: 10px 5px;
+                    line-height: 20px;
+                }
+                & li:first-child{
+                    line-height: 40px;
+                }
+            }
+            .text_S{
+                font-size: 13px;
+            }
+        }
+        .D_banner{
+            .banner_L{
+                .card{
+                    p{
+                        font-size: 15px;
+                        margin-top: 10px;
+                        line-height: 20px;
+                    }
+                    img{
+                        @include wh(100%,null);
+                    }
+                }
+            }
+        }
+        .D_M {
+            .DM_I{
+                h4{
+                    font-size: 28px;
+                    padding-bottom: 15px;
+                }
+                p{
+                    font-size: 15px;
+                    line-height: 25px;
+                }
+                img{
+                    @include wh(240px, null);
+                }
+            }
+        }
+        
+    }
+    .hide{
+        margin: 0 0 10px;
+        font-size: 16px;
+    }
+
+    .designPro > h3 {
+        font-size: 20px;
+    }
+}
+
+@keyframes slide_down{
+    0%{
+        transform: translateY(-150px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slide_right{
+    0%{
+        transform: translateX(150px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+ @include dIcon;
+ @include dContact;
+

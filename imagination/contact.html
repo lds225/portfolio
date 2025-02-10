@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <title>상상이상 | 블로그스킨 제작</title>
+    <!--SEO-->
+    <meta name="title" content="contact">
+    <meta name="keywords" content="상상이상">
+    <meta name="publisher" content="상상이상">
+    <meta name="robots" content="index,follow">
+
+    <!-- 플러그인 -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/contact.css">
+
+    <!-- js -->
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <!-- 헤더 -->
+    <header>
+        <?php include "header.html"; ?>
+    </header>
+
+ 
+
+    <!-- 메뉴 패딩박스 -->
+    <div class="paddingBox"></div>
+
+    <!-- 광고문의 -->
+    <div class="box contact">
+        <h2><span>상상이상</span> 광고문의</h2>
+            
+        <div class="contact_form">
+            <ul class="contact_list">
+                <li>
+                    <ul class="contact_grid">
+                        <li>
+                            <input type="text" placeholder="업체명" name="businessname" id="">
+                        </li>
+                        <li>
+                            <input type="text" placeholder="담당자 성함" name="name" id="">
+                        </li>
+                        <li>
+                            <input type="text" placeholder="연락처" name="tel" id="">
+                        </li>
+                        <li>
+                            <input type="text" placeholder="이메일" name="email" id="">
+                        </li>
+                    </ul>
+
+                </li>
+
+                <li>
+                    <textarea name="content" id="" placeholder="자세한 문의내용을 입력해주세요."></textarea>
+                </li>
+            </ul>
+
+            <div class="personal">
+                <label for="assent">
+                    개인정보 수집 · 동의
+                </label>
+                <input type="checkbox" name="assent" id="assent" class="assent">
+                <span>
+                    수집 및 이용목적 : 광고문의  |  보유 및 이용기간 : 상담 종결시 까지  |  수집하는 개인 정보 항목 : 이름, 연락처, 이메일 주소
+                </span>
+
+                <button class="conBtn" type="button">
+                    문의하기
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 문의 응답 팝업 -->
+    <div class="overlay" id="overlay">
+        <div class="p_popup" id="p_popup">
+            <button type="button" class="popclBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 13.426 13.423">
+                    <path id="Icon_ionic-ios-close" data-name="Icon ionic-ios-close" d="M19.589,18l4.8-4.8A1.124,1.124,0,0,0,22.8,11.616l-4.8,4.8-4.8-4.8A1.124,1.124,0,1,0,11.616,13.2l4.8,4.8-4.8,4.8A1.124,1.124,0,0,0,13.2,24.384l4.8-4.8,4.8,4.8A1.124,1.124,0,1,0,24.384,22.8Z" transform="translate(-11.285 -11.289)"/>
+                </svg>
+            </button>
+            <div class="okBox" id="okBox">
+                <p>접수가 완료 되었습니다.
+                </p>
+            </div>
+            <div class class="noBox" id="noBox">
+                <p>
+                    메일 주소가 유효한지 확인 해 주세요.<br>
+                    계속되는 오류 발생 시<br> 
+                    <a href="tel:02-6405-0132">02-6405-0132</a>로 문의주세요.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 푸터 -->
+    <footer>
+        <?php include "footer.html"; ?>
+    </footer>
+
+</body>
+</html>

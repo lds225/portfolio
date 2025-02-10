@@ -1,0 +1,313 @@
+@import "header.scss";
+
+
+// 메인 화면
+.main {
+    @include wh(100%, 85vh); 
+    position: relative;
+    background: url(../img/bg1.svg) no-repeat center center;
+    background-size: cover;
+}
+
+.mainBox {
+  margin: auto;
+  width: 75%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// 메인 텍스트
+.mTxt {
+  width: 55%;
+
+  & > p {
+    color: #002f6e;
+    font-size: 1vw;
+    line-height: 1.6vw;
+    animation: fadeDown 1s ease forwards;
+    opacity: 0;
+    
+    &.big {
+      font-size: 2.5vw;
+      font-weight: 800;
+      padding-bottom: 10px;
+      line-height: 3.5vw;
+    }
+   
+  }
+}
+
+// 더 알아보기 버튼
+.moreBtn {
+  cursor: pointer;
+  margin-top: 30px;
+  width: 170px;
+  animation: fadeUp 1s ease forwards;
+
+  & > a {
+    background: linear-gradient(45deg, #89e4ff, #ff01bf);
+    border-radius: 3px;
+    padding: 14px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+    position: relative;
+    color: #fff;
+
+    &::after {
+      content: "go";
+      color: $bk;
+      position: absolute;
+      right: 45px;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      color: #fff;
+    }
+
+
+    
+  }
+  
+  
+}
+
+// 메인 이미지
+.mImg {
+  width: 50%;
+  & > img {
+    width: 100%;
+    animation: float 1.2s ease-in-out infinite alternate;
+  }
+}
+
+// 메인 컨텐츠 
+.mainTit {
+  margin: auto;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #333333;
+  font-size: 45px;
+  width: fit-content;
+  font-weight: 800;
+  color: #333333;
+
+}
+
+.subTit {
+  padding-top: 20px;
+  font-size: 18px;
+  text-align: center;
+}
+
+// 마케팅 제안
+.marCon {
+  margin: auto;
+  width: 80%;
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+  // transition: .4s ease;
+}
+
+.adBox {
+  & > p {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    color: #255b9c;
+    padding-top: 15px;
+
+    & > span {
+      font-size: 16px;
+      color: #9c9c9c;
+    }
+  }
+}
+
+.adImg {
+  @include wh(120px, 120px);
+  @include flex(null);
+  margin: auto;
+  font-size: 0;
+
+  img {
+    transition: .2s ease;
+  }
+
+  &:hover {
+    &  img {
+      transform: scale(1.1);
+    }
+  }
+}
+
+// 솔루션
+.sol {
+  background-color: #fcf8fdd6;
+}
+
+.solCon {
+  padding-top: 50px;
+  width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  column-gap: 50px;
+}
+
+.solBox {
+  display: flex;
+}
+
+.solimg {
+  position: relative;
+  width: 150px;
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    content: "";
+    @include wh(130px,130px);
+    background-color: #e9e9e9;
+    transition: .2s ease;
+  }
+
+
+  & > img {
+    position: relative;
+    z-index: 1;
+    transition: .4s .1s ease;
+  }
+}
+
+.solTxt {
+  padding-left: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.solFlex {
+  & > p {
+    color: #255b9c;
+    font-size: 20px;
+    font-weight: 800;
+    padding-bottom: 10px;
+  }
+
+  & > span {
+    color: $bk;
+  }
+}
+
+
+// 애니메이션
+  @keyframes fadeLeft {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      right: 5%;
+    }
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(-15px);
+    }
+    100% {
+      transform: trnaslateY(15px);
+    }
+  }
+
+  @keyframes fadeDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-25px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeUp {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+
+// 호버
+  @media (hover:hover) {
+    .adImg {
+    
+      &:hover {
+        &  img {
+          transform: scale(1.07);
+        }
+      }
+    }
+
+    .solBtn {
+      & > a {
+    
+        &:hover {
+          background-color:#e75ca4;
+        }
+      }
+    
+      &:hover {
+        transform: translateY(-10px);
+      }
+    }
+
+    .moreBtn {
+      & > a {
+        &:hover {
+           &::after {
+            animation: fadeLeft .4s ease forwards;
+          }
+        }
+      }
+    }
+
+    .solBox {
+
+      &:hover{
+      
+        .solimg {
+  
+          & > img {
+            transform: translateY(-10px);
+          }
+  
+          &::after {
+            @include wh(145px,145px);
+            background-color: #c8dde9;
+            top: 40%;
+          }
+        }
+        
+      }
+
+    }
+     
+
+  }
+
+  
+  // 반응형
+  @include main;

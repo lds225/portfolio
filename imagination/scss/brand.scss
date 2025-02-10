@@ -1,0 +1,340 @@
+@import "header.scss";
+
+// 기업소개
+.brand.orgExp {
+    background-color: #fff;
+}
+
+.orgTit {
+    height: 400px;
+    color: #fff;
+    background-color: #444444;
+    display: flex;
+    position: relative;
+    transition: .2s ease;
+
+    & > .orgImg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        background-image: url(../img/brand/rgbg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.3;
+
+
+    }
+}
+
+.orgBan {
+    text-align: center;
+    position: relative;
+    z-index: 1px;
+
+    & > h2 {
+        font-size: 40px;
+        padding-bottom: 20px;
+        opacity: 0;
+        animation: fade .8s ease forwards;
+    }
+
+    & > p {
+        font-size: 20px;
+        opacity: 0;
+        line-height: 30px;
+        animation: fade .8s .3s ease forwards;
+    }
+}
+
+.orgIntro {
+    margin: 30px 0;
+    padding: 50px;
+    border: 1px solid #cccc;
+    border-radius: 5px;
+    border-style: dashed;
+
+    & > h2 {
+        padding-bottom: 15px;
+    }
+
+    & > p {
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+
+// 조직설명
+.orgExp {
+   position: relative;
+    padding: 80px 0;
+
+    & > .wrap {
+
+        & > h2 {
+            font-size: 35px;
+            color: $bk;
+            margin-bottom: 25px;
+
+            & > img {
+                vertical-align: middle;
+                position: relative;
+                top: -2px;
+                padding-right: 5px;
+            }
+        }
+    }
+}
+
+.org {
+    & > .on_list {
+        width: 1100px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+
+        & > .onCard {
+            display: block;
+            width: 100%;
+            height: auto;
+            background-color: #fff;
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05), 0 1px 1px rgba(0, 0, 0, 0.08);
+            color: #222;
+            margin: 0;
+
+            &.rgrg {
+                & > .on_img {
+                    width: 100%;
+                    height: 300px;
+
+                    &.rg1 {
+                        background-image: url(../img/brand/rg1.jpg);
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                    }
+
+                    &.rg2 {
+                        background-image: url(../img/brand/rg2.jpg);
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                    }
+
+                    &.rg3 {
+                        background-image: url(../img/brand/rg3.jpg);
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                    }
+
+                    & > img {
+                        width: 100%;
+                        height: 100%;
+                        position: unset;
+                        transform: none;
+                        top: unset;
+                        left: unset;
+                    }
+                }
+
+                & > .on_txt {
+
+                    & > .on_tit {
+                        font-size: 22px;
+                        padding-bottom: 15px;
+                    }
+    
+                    & > .on_ex {
+                        font-size: 16px;
+                        color: #444444;
+                        padding-bottom: 10px;
+                        line-height: 22px;
+                    }
+                }
+
+            } 
+            
+        }
+    }
+}
+
+//온라인
+.brand {
+    background-color: $blue;
+   position: relative;
+    padding: 80px 0;
+    & > .wrap {
+        position: relative;
+        z-index: 2;
+    animation: ttt 1s ease forwards;
+
+
+        & > h2 {
+            font-size: 35px;
+            color: $bk;
+            margin-bottom: 25px;
+
+            & > img {
+                vertical-align: middle;
+                position: relative;
+                top: -2px;
+                padding-right: 5px;
+            }
+        }
+    }
+
+    & > .onbg {
+        background-image: url('../img/brand/brand_bg1.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include wh(100%, 100%);
+    }
+    
+}
+
+
+.online {
+
+    // 온라인 타이틀
+    & > h4 {
+        text-align: center;
+        font-size: 22px;
+        color: #fff;
+        width: fit-content;
+        margin: auto;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "";
+            background-image: url('../img/brand/tit.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            @include wh(27px, 27px);
+            left: -60%;
+        }
+    
+    }
+
+    // 온라인 리스트 
+    & > .on_list {
+        display: flex;
+        justify-content: center;
+        margin: 50px 0;
+    }
+}
+
+// 온라인 카드
+.onCard {
+    @include wh(240px, 340px);
+    padding: 15px;
+    background: linear-gradient(-135deg, #d0dbe93b, transparent);
+    color: #fff;
+    border-radius: 10px;
+    margin: 0 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.09), 0 1px 5px rgba(0, 0, 0, 0.12);
+    transition: .4s ease;
+
+    & > p {
+        font-weight: 600;
+        padding-bottom: 10px;
+    }
+
+    & > .on_img {
+        @include wh(200px, 200px);
+        margin: auto;
+        position: relative;
+
+        & > img {
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    & > .on_txt {
+        padding-left: 10px;
+        padding-top: 15px;
+
+        & > .on_tit {
+            font-weight: 600;
+            padding-bottom: 5px;
+        }
+
+        & > .on_ex {
+            font-size: 14px;
+            color: #eee;
+        }
+    }
+
+}
+
+// 오프라인
+.brand {
+    &.br_off {
+        background-color: #0b3a78;
+
+        & > .onbg {
+            background-image: url('../img/brand/brand_bg2.svg');
+        }
+    }
+
+
+}
+
+.online {
+    &.offline {
+        
+
+        & > h4 {
+            color: #eee;
+
+            &::before {
+                left: -50%;
+            }
+        }
+    }
+}
+
+.off_list {
+    & > .onCard {
+        margin: 0 15px
+    }
+}
+
+@include brand;
+
+
+@keyframes ttt {
+    0% {
+      opacity: 0;
+      transform:translateY(-50px);
+    }
+    100% {
+      opacity : 1;
+      transform: translateY(0);
+    }
+  }
+
+
+  @keyframes fade {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity : 1;
+    }
+  }

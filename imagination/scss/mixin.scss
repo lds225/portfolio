@@ -1,0 +1,15 @@
+@mixin flex($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin wh($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+$bk: #222222;
+$blue: #2364b8;
+$Nanumb: 'Nanum Brush Script';

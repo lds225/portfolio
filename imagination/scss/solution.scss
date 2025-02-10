@@ -1,0 +1,261 @@
+@import "header.scss";
+
+
+
+//공통
+.bg_wrap{
+    @include wh(85%,null);
+    margin: auto;
+    padding: 4% 8%;
+}
+h2{
+    font-size: 48px;
+    line-height: 60px;
+    letter-spacing: 3px;
+    font-weight: 900;
+}
+h3{
+    font-size: 20px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    line-height: 30px;
+}
+
+
+
+
+//메인 시작
+.solu_wrap{ 
+    //솔루션 메인
+    .solubg{
+        background: url(../image/solution/solubg.jpg) no-repeat;
+        background-position: center;
+    }
+    .soluM{
+        text-align: center;
+        color: #fff;
+        .soluH{
+            p{
+                font-size: 3vw;
+                line-height: 3.9vw;
+            }
+        }
+        .soluI{
+            margin-top: 5%;
+            ul{
+                display: flex;
+                justify-content: center;
+                gap: 15%;
+                li{
+                    img{
+                         @include wh(135px,135px);
+                    }
+                    h4{
+                        font-size: 24px;
+                        font-weight: 600;
+                        margin-top: 15px;
+                    }
+                }
+            }
+        }
+    }
+    //광고 전략
+    .soluSH_bg{
+        //pc버전 이미지+제목
+        .solu_pc{
+            display: block;
+            .solu_map{
+                text-align: center;
+                h2{
+                    padding-bottom: 15px;
+                    border-bottom: 1px solid;
+                    display: inline-block;
+                    color: #333;
+                }
+                h3{
+                    font-weight: 500;
+                }
+            }
+            .map_F{
+                text-align: center;
+                margin-top: 8%;
+                img{
+                    @include wh(80%,null);
+                }
+            }
+        }
+        //1050px이하 이미지+제목
+        .solu_under{
+            display: none;
+            .solu_map{
+                text-align: center;
+                h2{
+                    padding-bottom: 15px;
+                    border-bottom: 1px solid;
+                    display: inline-block;
+                    color: #333;
+                }
+                h3{
+                    font-weight: 500;
+                }
+            }
+            .map_S{
+                margin-top: 8%;
+                ul{
+                    @include flex(null);
+                    flex-wrap: wrap;
+                    li{
+                        @include wh(25%,null);
+                        text-align: center;
+                        h5{
+                            font-size: 20px;
+                            font-weight: 500;
+                            margin: 8% 0 12%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //히트맵 
+    .hitmap{
+
+
+    }
+    //로그분석기
+
+    //자동입찰
+
+    //경쟁사 분석
+
+    //맞춤보고서
+
+    //디자인 센터
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//반응형
+
+@media (max-width: $menu) {
+    .solu_wrap{ 
+        //솔루션 메인
+        .soluM{
+            .soluH{
+                p{
+                    font-size: 4.2vw;
+                    line-height: 5.4vw;
+                }
+            }
+            .soluI{
+                ul{
+                    li{
+                        img{
+                             @include wh(85px,85px);
+                        }
+                        h4{
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+        //광고 전략
+        .soluSH_bg{
+            //pc버전 이미지+제목
+            .solu_pc{
+                display: none;
+                .solu_map{
+                    text-align: center;
+                    h2{
+                        padding-bottom: 15px;
+                        border-bottom: 1px solid;
+                        display: inline-block;
+                        color: #333;
+                    }
+                    h3{
+                        font-weight: 500;
+                    }
+                }
+                .map_F{
+                    text-align: center;
+                    margin-top: 8%;
+                    img{
+                        @include wh(80%,null);
+                    }
+                }
+            }
+            //1050px이하 이미지+제목
+            .solu_under{
+                display: block;
+                .solu_map{
+                    text-align: center;
+                    h2{
+                        padding-bottom: 15px;
+                        border-bottom: 1px solid;
+                        display: inline-block;
+                        color: #333;
+                    }
+                    h3{
+                        font-weight: 500;
+                    }
+                }
+                .map_S{
+                    margin-top: 8%;
+                    ul{
+                        @include flex(null);
+                        flex-wrap: wrap;
+                        li{
+                            @include wh(25%,null);
+                            text-align: center;
+                            h5{
+                                font-size: 20px;
+                                font-weight: 500;
+                                margin: 8% 0 12%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
+}
+
+@media (max-width: $pad) {
+
+}
+
+@media (max-width: $mobile) {
+
+}
+
+
+
+@include bg_wrap;
+
+@media (hover: hover) {
+    .viralAD{
+        .viralAD_card{
+            .card{
+                &:hover{
+                    transform: translateY(-15px);
+                }
+            }
+        }
+    }
+}
